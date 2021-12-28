@@ -1,0 +1,56 @@
+@import "colors.css";
+
+/* DISPLAY */
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.row-wrap {
+  flex-flow: row wrap;
+}
+
+/* MARGINS */
+.mg-2 {
+  margin: 2rem;
+}
+
+.mg-2-v {
+  margin: 2rem 0;
+}
+
+.mg-2-h {
+  margin: 0 2rem;
+}
+
+/* PADDING */
+.pd-2 {
+  padding: 2rem;
+}
+
+.pd-0-r {
+  padding-right: 0;
+}
+
+/* COLORS TEXTS */
+.color-white {
+  color: var(--white);
+}
+
+.color-white:hover {
+  color: var(--orange);
+}
+
+/* TITLE */
+.span-title {
+  display: block;
+}
+
+.title-bold {
+  font-weight: 700;
+}
+
+.title-light {
+  font-weight: 300;
+}

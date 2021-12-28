@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "colors.css";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.my-navbar {
+  position: absolute;
+  padding: 1rem 4rem;
+  background: transparent !important;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  z-index: 999;
+}
+
+.my-navbar-fixed {
+  position: fixed;
+  padding: 0rem 4rem;
+  background: var(--white) !important;
+  border-bottom: 1px solid var(--primary-color);
+  width: 100%;
+  z-index: -1;
+}
+
+.my-navbar-fixed-animation {
+  z-index: 999;
+}
+
+.my-navbar-fixed #navbarSupportedContentFixed .nav-item .nav-link {
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--orange) !important;
+  padding: 0 0.8rem !important;
+}
+
+.my-navbar-fixed #navbarSupportedContentFixed .btn-access-system {
+  background: transparent;
+  border: 1px solid var(--orange);
+  border-radius: 2rem;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
+.my-navbar-fixed #navbarSupportedContentFixed .btn-access-system:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
+.nav-item:first-child {
+  padding-left: 2rem !important;
+}
+
+.my-navbar #navbarSupportedContent .nav-item .nav-link {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff !important;
+  padding: 0 0.8rem !important;
+}
+
+/* LOGO */
+.my-logo {
+  width: 10rem;
+}
+
+/* BUTTON */
+.btn-access-system {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn-access-system:hover {
+  background: #fff;
+}
+
+/* ABOUT APROMS */
+#about-aproms {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+section#about-aproms div.row:first-child {
+  padding: 0.5rem 0;
+}
+
+section#about-aproms div.row {
+  padding: 1rem 0;
+}
+
+section#about-aproms div.row:last-child {
+  padding: 0.4rem 0;
+}
+
+section#about-aproms div.row p,
+.about-link {
+  color: #000;
+}
+
+section#about-aproms div.row h2 {
+  font-weight: 300;
+}
+
+/* SOLUTIONS */
+#solutions {
+  background-color: var(--grey-light);
+}
+
+#solutions .cards-solutions {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+#solutions .cards-solutions .col {
+  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+#solutions .cards-solutions .col:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#solutions .cards-solutions .cards-solutions-item img {
+  padding-bottom: 2rem;
+}
+
+#solutions .cards-solutions .cards-solutions-item img.icon-file {
+  width: 4.5rem;
+}
+
+#solutions .cards-solutions .cards-solutions-item span a {
+  color: var(--primary-color);
+  display: block;
+}
+
+#solutions .cards-solutions .cards-solutions-item .title-bold {
+  text-transform: uppercase;
+}
+
+/* COMMERCIAL */
+#commercial .commercial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#commercial .commercial-container .commercial-img {
+  width: 45rem;
+}
+
+#commercial .commercial-container .commercial-item {
+  text-align: center;
+}
+
+#commercial .commercial-container .commercial-item h2,
+#commercial .commercial-container .commercial-item p,
+#commercial .commercial-container .commercial-item a {
+  color: var(--primary-color);
+}
+
+#commercial .commercial-container .commercial-item p {
+  padding-bottom: 4rem;
+  font-size: 20px;
+}
+
+#commercial .commercial-container .commercial-item a.btn-commercial {
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+}
+
+#commercial .commercial-container .commercial-item a.btn-commercial:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* PARTNER */
+.btn-wrap {
+  position: absolute;
+  z-index: 1;
+  top: 86%;
+  left: 42%;
+  width: 20rem;
+  height: 2.5rem;
+  margin: -15px 0 0 -30px;
+  border: 1px solid var(--white);
+  border-radius: 2rem;
+  color: var(--white);
+}
+
+.btn-wrap:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+/* MAP */
+#maps .row {
+  text-align: center;
+  padding: 2.5rem 0;
+  color: var(--primary-color);
+}
+
+#maps .row:last-child {
+  padding-top: 0rem;
+  padding-bottom: 2.5rem;
+}
+
+#maps .row .maps-flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+}
+
+#maps #map {
+  width: 70%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+#maps .form-route {
+  width: 100%;
+  text-align: left;
+}
+
+#maps .div-start,
+#maps .div-end {
+  margin-top: 2rem;
+}
+
+#maps .form-select:first-child {
+  margin-bottom: 1rem;
+}
+
+#maps .btn-form-posto {
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+  color: var(--primary-color);
+}
+
+#maps .btn-form-posto:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* ASK */
+#ask {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 2rem;
+}
+
+#ask a.color-white:hover {
+  color: var(--orange);
+}
+
+#ask .div-form-ask {
+  display: flex;
+  justify-content: center;
+}
+
+#ask .form-ask {
+  width: 60%;
+}
+
+#ask .btn-form-ask {
+  border: 1px solid var(--white);
+  border-radius: 2rem;
+  color: var(--white);
+}
+
+#ask .btn-form-ask:hover {
+  background-color: var(--white);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* CONTACTS */
+#contacts {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#contacts .flexbox-contacts {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#contacts .flexbox-item-contacts {
+  flex-basis: 35%;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--grey);
+  color: var(--white);
+}
+
+footer .flexbox {
+  align-items: flex-start;
+}
+
+footer .flexbox-item-footer {
+  flex-basis: 25%;
+}
+
+footer .container .logo-aproms {
+  width: 15rem;
+}
+
+footer .container ul li a {
+  color: var(--white);
+}
+
+footer .container ul li a:hover {
+  color: var(--orange);
+}

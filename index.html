@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/utils.css">
+  <title>APROMS | Associação dos Postos de MS</title>
+</head>
+
+<body>
+  <header>
+    <!-- navbar absolute -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="my-logo" src="assets/img/logo/logo_aproms_navbar.svg" alt="Aproms logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContentFixed" aria-controls="navbarSupportedContentFixed"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nós</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Produtos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Calcular desconto</a></li>
+                <li><a class="dropdown-item" href="#">Gestão de documentos</a></li>
+                <li><a class="dropdown-item" href="#">Cartão frota</a></li>
+                <li><a class="dropdown-item" href="#">Cartão frete</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Seja rede credenciada</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ajuda</a>
+            </li>
+          </ul>
+          <button class="btn btn-access-system" type="submit">Acessar sistema</button>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar fixed -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar-fixed">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="my-logo" src="assets/img/logo/logo_aproms_navbar_fixed.svg" alt="Aproms logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContentFixed" aria-controls="navbarSupportedContentFixed"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContentFixed">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nós</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Produtos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Calcular desconto</a></li>
+                <li><a class="dropdown-item" href="#">Gestão de documentos</a></li>
+                <li><a class="dropdown-item" href="#">Cartão frota</a></li>
+                <li><a class="dropdown-item" href="#">Cartão frete</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Seja rede credenciada</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ajuda</a>
+            </li>
+          </ul>
+          <button class="btn btn-access-system" type="submit">Acessar sistema</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="banners">
+      <div id="carouselBannerAproms" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselBannerAproms" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselBannerAproms" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselBannerAproms" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/banners/banner_aproms.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/banners/banner_aproms.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/banners/banner_aproms.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBannerAproms" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBannerAproms" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="about-aproms">
+      <div class="container">
+        <div class="row">
+          <h2>
+            <span class="span-title title-bold">
+              Conheça a APROMS,
+            </span>
+            <span class="span-title">
+              o rumo certo da parceria
+            </span>
+          </h2>
+        </div>
+        <div class="row">
+          <p>Com mais de 20 anos no mercado, a APROMS é referência na administração de pagamentos e gestão de documentos
+            de Frete.<br> Queremos crescer junto com a sua empresa e ser a parceria que facilita e fortalece seu
+            negócio.<br> Saiba mais na seção <a class="about-link" href="#">sobre nós</a>.</p>
+        </div>
+        <div class="row">
+          <h2>Nossas soluções para você:</h2>
+        </div>
+      </div>
+    </section>
+    <section id="solutions">
+      <div class="container">
+        <div class="row cards-solutions">
+          <div class="col">
+            <div class="cards-solutions-item">
+              <img class="icon-file" src="assets/img/icons/file.svg" alt="File icon">
+            </div>
+            <div class="cards-solutions-item">
+              <h3 class="title-bold">Gestão de documentos</h3>
+            </div>
+            <div class="cards-solutions-item">
+              <span class="title-light">Coleta, conferência e envio de documentos de pagamento de frete. <a
+                  href="#">Saiba
+                  mais</a></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cards-solutions-item">
+              <img src="assets/img/icons/card.svg" alt="Card icon">
+            </div>
+            <div class="cards-solutions-item">
+              <h3 class="title-bold">Cartão frota</h3>
+            </div>
+            <div class="cards-solutions-item">
+              <span class="title-light">Uma forma fácil, segura e ágil de gerir os gastos da sua frota de veículos
+                pesados
+                ou leves. <a href="#">Saiba mais</a></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cards-solutions-item">
+              <img src="assets/img/icons/frete.svg" alt="Frete icon">
+            </div>
+            <div class="cards-solutions-item">
+              <h3 class="title-bold">Cartão frete</h3>
+            </div>
+            <div class="cards-solutions-item">
+              <span class="title-light">Administração de pagamentos e gestão de documentos de frete. <a href="#">Saiba
+                  mais</a></span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cards-solutions-item">
+              <img src="assets/img/icons/posto.svg" alt="Posto icon">
+            </div>
+            <div class="cards-solutions-item">
+              <h3 class="title-bold">Rede credenciada</h3>
+            </div>
+            <div class="cards-solutions-item">
+              <span class="title-light">Vantagens e benefícios para os parceiros credenciados. <a href="#">Saiba
+                  mais</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="commercial">
+      <div class="container">
+        <div class="commercial-container">
+          <div class="col-6">
+            <img class="commercial-img" src="assets/img/apresentação_comercial_completa_cartão_frota.svg"
+              alt="Apresentação Cartão Frota">
+          </div>
+          <div class="col-6 commercial-item">
+            <h2 class="title-bold">Segurança e agilidade</h2>
+            <p class="title-light">Através do nosso sistema você tem acesso rápido e de forma segura aos documentos
+              digitalizados antes mesmo
+              de receber os originais.</p>
+            <a href="#" class="btn btn-commercial">Converse com a nossa equipe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="partner">
+      <div id="carouselOneSlideOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/banners/banner_partner.png" class="d-block w-100" alt="Partner banner">
+            <a href="#" class="btn btn-wrap">Faça parte da rede credenciada</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="maps">
+      <div class="container">
+        <div class="row">
+          <h1 class="title-bold">Consulte a rede credenciada</h1>
+        </div>
+        <div class="row">
+          <div class="maps-flexbox">
+            <div id="maps-form">
+              <form class="form-route" action="">
+                <div class="mb-3">
+                  <label for="findPosto" class="form-label">Encontre um posto</label>
+                  <input type="text" class="form-control" id="findPosto" placeholder="Nome do posto">
+                </div>
+
+                <div class="div-start mb-3">
+                  <label for="start" class="form-label">Início</label>
+                  <div>
+                    <select class="form-select">
+                      <option selected>Selecione um estado</option>
+                      <option value="1">SP</option>
+                      <option value="2">MS</option>
+                      <option value="3">PR</option>
+                    </select>
+                    <select class="form-select">
+                      <option selected>Selecione uma cidade</option>
+                      <option value="1">São Paulo</option>
+                      <option value="2">Dourados</option>
+                      <option value="3">Curitiba</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="div-end mb-3">
+                  <label for="end" class="form-label">Final</label>
+                  <div>
+                    <select class="form-select">
+                      <option selected>Selecione um estado</option>
+                      <option value="1">SP</option>
+                      <option value="2">MS</option>
+                      <option value="3">PR</option>
+                    </select>
+                    <select class="form-select">
+                      <option selected>Selecione uma cidade</option>
+                      <option value="1">São Paulo</option>
+                      <option value="2">Dourados</option>
+                      <option value="3">Curitiba</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-lg btn-form-posto">Pesquisar</button>
+                </div>
+              </form>
+            </div>
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ask">
+      <div class="container">
+        <div class="row">
+          <h2 class="title-bold">Tem alguma dúvida?</h2>
+        </div>
+        <div class="row mg-2-v">
+          <span class="title-light">Acesse nossas <a class="color-white" href="#">Dúvidas Frequentes</a> ou envie sua
+            pergunta..</span>
+        </div>
+        <div class="row mg-2-v div-form-ask">
+          <form class="form-ask" action="">
+            <div class="row mb-2">
+              <div class="col-12">
+                <input type="text" class="form-control" id="nameAsker" name="name" placeholder="Nome">
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-6 pd-0-r">
+                <input type="email" class="form-control" id="emailAsker" name="email" placeholder="Email">
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control" id="numberAsker" name="number" placeholder="Telefone">
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-12">
+                <input type="text" class="form-control" id="subjectAsker" name="subject" placeholder="Assunto">
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-12">
+                <textarea class="form-control" id="askAsker" name="ask" placeholder="Sua mensagem" rows="8"></textarea>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-12">
+                <p>captcha</p>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-12">
+                <button type="submit" class="btn btn-form-ask">Enviar mensagem</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="contacts">
+      <div class="container">
+        <div class="row">
+          <h2 class="title-light">Contato</h2>
+        </div>
+        <div class="flexbox-contacts row-wrap mg-2-v">
+          <div class="flexbox-item-contacts">
+            <h3 class="title-light">Atendimento</h3>
+            <p>teste</p>
+          </div>
+          <div class="flexbox-item-contacts">
+            <h3 class="title-light">Comercial</h3>
+            <p>teste</p>
+          </div>
+          <div class="flexbox-item-contacts">
+            <h3 class="title-light">Faturamento</h3>
+            <p>teste</p>
+          </div>
+          <div class="flexbox-item-contacts">
+            <h3 class="title-light">Marketing</h3>
+            <p>teste</p>
+          </div>
+          <div class="flexbox-item-contacts">
+            <h3 class="title-light">Financeiro</h3>
+            <p>teste</p>
+          </div>
+          <div class="flexbox-item-contacts">
+            <h3 class="title-light">Crédito</h3>
+            <p>teste</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container pd-2">
+      <div class="flexbox">
+        <div class="flexbox-item-footer">
+          <a href="#banners">
+            <img class="logo-aproms" src="assets/img/logo/logoinv.png" alt="Logo Aproms">
+          </a>
+        </div>
+        <div class="flexbox-item-footer">
+          <p>Trabalhe conosco</p>
+          <span>Clique <a class="color-white" href="mailto:rh@aproms.com.br">aqui</a> <br> para enviar seu
+            currículo</span>
+        </div>
+        <div class="flexbox-item-footer">
+          <p>Links</p>
+          <ul class="list-unstyled">
+            <li>
+              <a href="">Quem somos</a>
+            </li>
+            <li>
+              <a href="">Transportadora</a>
+            </li>
+            <li>
+              <a href="">Posto</a>
+            </li>
+            <li>
+              <a href="#contacts">Contatos</a>
+            </li>
+            <li>
+              <a href="">Privacidade</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flexbox-item-footer">
+          <p>Fale conosco</p>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p>Rua Doutor Nelson de Araújo, 340, 1º andar - Jd. América. CEP 79804-040 Dourados, MS</p>
+        <p>Copyright © Todos direitos reservados | by APROMS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7wfpZymDPebSXfq9trcCSljaORBeAa2w&libraries=geometry&callback=initMap&v=weekly"
+    async></script>
+  <!-- <script async="" defer=""
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7wfpZymDPebSXfq9trcCSljaORBeAa2w&amp;libraries=geometry&amp;callback=initMap"></script> -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/map.js"></script>
+</body>
+
+</html>
