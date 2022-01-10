@@ -5,6 +5,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.fas {
+  color: var(--orange);
+}
+
 /* NAVBAR */
 .my-navbar {
   position: absolute;
