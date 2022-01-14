@@ -64,4 +64,20 @@ $(document).ready(function () {
       $(targetClass).removeClass(animationClass);
     }
   });
+
+  $(".btn-access-system").on("click", () => {
+    showModal($("div#modalLogin"));
+  });
+
+  $(".btn-open-calcdesconto").on("click", () => {
+    showModal($("div#modalCalcDesconto"));
+  });
 });
+
+function showModal(selector) {
+  let divModal = selector;
+
+  divModal.hasClass("activeModal")
+    ? divModal.removeClass("activeModal").show().fadeOut()
+    : divModal.addClass("activeModal").hide().fadeIn();
+}

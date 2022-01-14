@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/utils.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.svg">
   <title>APROMS | Associação dos Postos de MS</title>
 </head>
 
@@ -38,7 +39,7 @@
                 Produtos
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Calcular desconto</a></li>
+                <li><a class="dropdown-item btn-open-calcdesconto">Calcular desconto</a></li>
                 <li><a class="dropdown-item" href="#">Gestão de documentos</a></li>
                 <li><a class="dropdown-item" href="#">Cartão frota</a></li>
                 <li><a class="dropdown-item" href="#">Cartão frete</a></li>
@@ -54,7 +55,7 @@
               <a class="nav-link" href="#">Ajuda</a>
             </li>
           </ul>
-          <button class="btn btn-access-system" type="submit">Acessar sistema</button>
+          <button class="btn btn-access-system" type="button">Acessar sistema</button>
         </div>
       </div>
     </nav>
@@ -83,7 +84,7 @@
                 Produtos
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Calcular desconto</a></li>
+                <li><a class="dropdown-item btn-open-calcdesconto">Calcular desconto</a></li>
                 <li><a class="dropdown-item" href="#">Gestão de documentos</a></li>
                 <li><a class="dropdown-item" href="#">Cartão frota</a></li>
                 <li><a class="dropdown-item" href="#">Cartão frete</a></li>
@@ -99,7 +100,7 @@
               <a class="nav-link" href="#">Ajuda</a>
             </li>
           </ul>
-          <button class="btn btn-access-system" type="submit">Acessar sistema</button>
+          <button class="btn btn-access-system">Acessar sistema</button>
         </div>
       </div>
     </nav>
@@ -437,6 +438,77 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div id="modalLogin" class="modal">
+    <div>
+      <a title="Fechar" class="close btn-access-system"><i class="fas fa-times"></i></a>
+      <div class="login-user-icon"><i class="fas fa-user"></i></div>
+      <h2 class="mb-3">Login</h2>
+      <form action="">
+        <div class="row mb-3">
+          <div class="col-12">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Somente números">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login" name="login" placeholder="Não use espaços">
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <label for="pass">Senha</label>
+            <input type="text" class="form-control" id="pass" name="pass" placeholder="Não use espaços">
+          </div>
+        </div>
+        <div class="row mb-3 button-form-submit">
+          <div class="col-12 mb-3">
+            <button class="btn btn-lg btn-login">Login</button>
+          </div>
+          <div class="col-12">
+            <a href="">Esqueci minha senha</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modalCalcDesconto" class="modal">
+    <div>
+      <a title="Fechar" class="close btn-open-calcdesconto"><i class="fas fa-times"></i></a>
+      <h2 class="mb-3">Calcular descontos</h2>
+      <form action="">
+        <div class="row mb-3">
+          <div class="col-12">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Somente números">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login" name="login" placeholder="Não use espaços">
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <label for="pass">Senha</label>
+            <input type="text" class="form-control" id="pass" name="pass" placeholder="Não use espaços">
+          </div>
+        </div>
+        <div class="row mb-3 button-form-submit">
+          <div class="col-12 mb-3">
+            <button class="btn btn-lg btn-login">Login</button>
+          </div>
+          <div class="col-12">
+            <a href="">Esqueci minha senha</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- SCRIPTS -->
   <script

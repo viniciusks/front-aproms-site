@@ -69,7 +69,7 @@ body {
 }
 
 /* BUTTON */
-.btn-access-system {
+button.btn-access-system {
   background: transparent;
   border: 1px solid #fff;
   border-radius: 2rem;
@@ -77,7 +77,7 @@ body {
   text-transform: uppercase;
 }
 
-.btn-access-system:hover {
+button.btn-access-system:hover {
   background: #fff;
 }
 
@@ -328,5 +328,109 @@ footer .container ul li a {
 }
 
 footer .container ul li a:hover {
+  color: var(--orange);
+}
+
+.btn-open-calcdesconto {
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+}
+
+.modal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px 15px 20px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#modalLogin.modal > div {
+  padding: 60px 20px 15px 20px;
+}
+
+#modalCalcDesconto.modal > div {
+  padding: 30px 20px 15px 20px;
+}
+
+.close {
+  position: absolute;
+  width: 30px;
+  right: -15px;
+  top: -20px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+  cursor: pointer;
+}
+
+.close i {
+  color: var(--white);
+}
+
+.login-user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -55px;
+  right: 150px;
+  background-color: var(--orange);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.login-user-icon i {
+  color: var(--white);
+  font-size: 4rem;
+}
+
+div#modalLogin form {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+div#modalLogin form .button-form-submit {
+  text-align: center;
+}
+
+div#modalLogin form .button-form-submit .btn-login {
+  background-color: transparent;
+  border-radius: 2rem;
+  color: var(--orange);
+  border-color: var(--orange);
+  width: 100%;
+}
+
+div#modalLogin form .button-form-submit .btn-login:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+div#modalLogin form .button-form-submit a {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+div#modalLogin form .button-form-submit a:hover {
   color: var(--orange);
 }
