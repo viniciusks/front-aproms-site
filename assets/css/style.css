@@ -361,6 +361,10 @@ footer .container ul li a.social-network:hover {
   z-index: 99999;
 }
 
+#modalCalcDesconto.modal {
+  overflow-y: hidden;
+}
+
 .modal > div {
   width: 400px;
   position: relative;

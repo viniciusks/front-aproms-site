@@ -1,0 +1,69 @@
+@import "../colors.css";
+
+img.icon-file {
+  width: 7.5rem;
+}
+
+#about-us {
+  color: var(--primary-color);
+}
+
+#about-us .container .row > p {
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+#about-us-cards {
+  background-color: var(--grey-light);
+}
+
+#about-us-cards .cards-solutions {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+#about-us-cards .cards-solutions .col {
+  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+#about-us-cards .cards-solutions .col:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#about-us-cards .cards-solutions .cards-solutions-item img {
+  padding-bottom: 2rem;
+}
+
+#about-us-cards .cards-solutions .cards-solutions-item img.icon-file {
+  width: 8rem;
+}
+
+#about-us-cards .cards-solutions .cards-solutions-item span a {
+  color: var(--primary-color);
+  display: block;
+}
+
+#about-us-cards .cards-solutions .cards-solutions-item .title-bold {
+  text-transform: uppercase;
+}
+
+/* PROPOSE */
+#propose {
+  color: var(--primary-color);
+}
+
+#propose .container .row {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#propose .container .row .propose-item:first-child {
+  margin-bottom: 2rem;
+}
+
+#propose .container .row .propose-item {
+  margin: 1rem 0;
+}
