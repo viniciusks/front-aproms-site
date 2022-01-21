@@ -1,3 +1,5 @@
+importComponents(window.location.pathname);
+
 $(document).ready(function () {
   // Function Solutions Hover
   $("#solutions .cards-solutions .col").hover(
@@ -56,28 +58,52 @@ $(document).ready(function () {
       targetClass = ".my-navbar-fixed",
       animationClass = "my-navbar-fixed-animation";
 
-    if (documentTop > 100) {
+    if (documentTop >= 100) {
       if (!$(targetClass).hasClass(animationClass)) {
         $(targetClass).addClass(animationClass).hide().fadeIn();
       }
     } else {
-      $(targetClass).removeClass(animationClass);
+      $(targetClass).removeClass(animationClass).fadeOut();
     }
-  });
-
-  $(".btn-access-system").on("click", () => {
-    showModal($("div#modalLogin"));
-  });
-
-  $(".btn-open-calcdesconto").on("click", () => {
-    showModal($("div#modalCalcDesconto"));
   });
 });
 
 function showModal(selector) {
-  let divModal = selector;
+  let divModal = $(selector);
 
   divModal.hasClass("activeModal")
     ? divModal.removeClass("activeModal").show().fadeOut()
     : divModal.addClass("activeModal").hide().fadeIn();
+}
+
+function importComponents(path) {
+  let pathToComponent =
+    path.split("/")[1] == "pages" ? "../components" : "./components";
+
+  // Import navbar
+  fetch(pathToComponent + "/navbar.html")
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      document.querySelector("header").innerHTML = data;
+    });
+
+  // Import footer
+  fetch(pathToComponent + "/footer.html")
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      document.querySelector("footer").innerHTML = data;
+    });
+
+  // Import modals
+  fetch(pathToComponent + "/modals.html")
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      document.querySelector("div#modalContents").innerHTML = data;
+    });
 }

@@ -1,0 +1,91 @@
+<div id="modalLogin" class="modal">
+  <div>
+    <a title="Fechar" class="close btn-access-system" onclick="showModal('div#modalLogin')"><i
+        class="fas fa-times"></i></a>
+    <div class="login-user-icon"><i class="fas fa-user"></i></div>
+    <h2 class="mb-3">Login</h2>
+    <form action="">
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="cnpj">CNPJ</label>
+          <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Somente números">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="login">Login</label>
+          <input type="text" class="form-control" id="login" name="login" placeholder="Não use espaços">
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12">
+          <label for="pass">Senha</label>
+          <input type="text" class="form-control" id="pass" name="pass" placeholder="Não use espaços">
+        </div>
+      </div>
+      <div class="row mb-3 button-form-submit">
+        <div class="col-12 mb-3">
+          <button class="btn btn-lg btn-login">Login</button>
+        </div>
+        <div class="col-12">
+          <a href="">Esqueci minha senha</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="modalCalcDesconto" class="modal">
+  <div>
+    <a title="Fechar" class="close btn-open-calcdesconto" onclick="showModal('div#modalCalcDesconto')"><i
+        class="fas fa-times"></i></a>
+    <h2 class="mb-3">Calcular descontos</h2>
+    <hr>
+    <form action="">
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="pesoSaida">PESO SAÍDA</label>
+          <input type="text" class="form-control" id="pesoSaida" name="pesoSaida" placeholder="Somente números">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="valorMercadoria">VALOR DA MERCADORIA</label>
+          <input type="text" class="form-control" id="valorMercadoria" name="valorMercadoria"
+            placeholder="Somente números">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="tipoQuebra">TIPO DE QUEBRA</label>
+          <select id="tipoQuebra" class="form-select" aria-label="Default select example" name="tipoQuebra">
+            <option value="">-- Escolha a sua opção --</option>
+            <option value="total">TOTAL</option>
+            <option value="dif">DIFERENÇA</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="tolerancia">% TOLERANCIA</label>
+          <input type="text" class="form-control" id="tolerancia" name="tolerancia" placeholder="Somente números">
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12">
+          <label for="pesoChegada">PESO CHEGADA</label>
+          <input type="text" class="form-control" id="pesoChegada" name="pesoChegada" placeholder="Somente números">
+        </div>
+      </div>
+      <div class="row mb-3 button-form-submit">
+        <div class="col-12 mb-3">
+          <button class="btn btn-lg btn-calcdesconto">Calcular</button>
+        </div>
+        <hr>
+        <div class="col-12">
+          <label for="valorDesconto">VALOR DESCONTO</label>
+          <input type="text" class="form-control" id="valorDesconto" name="valorDesconto" disabled>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

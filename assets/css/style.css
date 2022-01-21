@@ -9,6 +9,10 @@ body {
   color: var(--orange);
 }
 
+.fab {
+  color: var(--orange);
+}
+
 /* NAVBAR */
 .my-navbar {
   position: absolute;
@@ -21,6 +25,7 @@ body {
 
 .my-navbar-fixed {
   position: fixed;
+  display: none;
   padding: 0rem 4rem;
   background: var(--white) !important;
   border-bottom: 1px solid var(--primary-color);
@@ -331,6 +336,15 @@ footer .container ul li a:hover {
   color: var(--orange);
 }
 
+footer .container ul li a.social-network {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer .container ul li a.social-network:hover {
+  color: var(--orange);
+}
+
 .btn-open-calcdesconto {
   cursor: pointer;
 }
@@ -403,6 +417,7 @@ footer .container ul li a:hover {
   font-size: 4rem;
 }
 
+/* MODAL LOGIN */
 div#modalLogin form {
   text-align: left;
   width: 80%;
@@ -432,5 +447,38 @@ div#modalLogin form .button-form-submit a {
 }
 
 div#modalLogin form .button-form-submit a:hover {
+  color: var(--orange);
+}
+
+/* MODAL CALCULO DESCONTO */
+div#modalCalcDesconto form {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+div#modalCalcDesconto form .button-form-submit {
+  text-align: center;
+}
+
+div#modalCalcDesconto form .button-form-submit .btn-calcdesconto {
+  background-color: transparent;
+  border-radius: 2rem;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 100%;
+}
+
+div#modalCalcDesconto form .button-form-submit .btn-calcdesconto:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+div#modalCalcDesconto form .button-form-submit a {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+div#modalCalcDesconto form .button-form-submit a:hover {
   color: var(--orange);
 }
