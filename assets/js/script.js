@@ -172,3 +172,35 @@ function importComponents(path) {
       document.querySelector("div#modalContents").innerHTML = data;
     });
 }
+
+function calculoDesconto(selector) {
+  // Coleta de variáveis
+  let pesoSaida = parseInt($(selector)[0][0].value);
+  let valorMercadoria =
+    parseFloat($(selector)[0][1].value.replace(",", ".")) / pesoSaida;
+  let tipoQuebra = $(selector)[0][2].value;
+  let tolerancia = parseFloat($(selector)[0][3].value.replace(",", "."));
+  let pesoChegada = parseInt($(selector)[0][4].value);
+  let valorDesconto = $(selector)[0][6];
+
+  // Primeiro passo
+  // Cálculo do valor da tolerância da quebra
+  valorQuebra = pesoSaida * (tolerancia / 100);
+
+  // Segundo passo
+  // Cálculo da perda real da mercadoria
+  perdaReal = pesoSaida - pesoChegada;
+
+  if (tipoQuebra == "parcial") {
+    perdaExcedente = perdaReal - valorQuebra;
+    desconto = valorMercadoria * perdaExcedente;
+  } else {
+    if (perdaReal > valorQuebra) {
+      desconto = valorMercadoria * perdaReal;
+    } else {
+      desconto = 0;
+    }
+  }
+
+  valorDesconto.value = parseFloat(desconto.toFixed(2));
+}

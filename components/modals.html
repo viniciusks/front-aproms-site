@@ -40,10 +40,10 @@
         class="fas fa-times"></i></a>
     <h2 class="mb-3">Calcular descontos</h2>
     <hr>
-    <form action="">
+    <form id="formCalculoDesconto" action="">
       <div class="row mb-3">
         <div class="col-12">
-          <label for="pesoSaida">PESO SAÍDA</label>
+          <label for="pesoSaida">PESO SAÍDA (KG)</label>
           <input type="text" class="form-control" id="pesoSaida" name="pesoSaida" placeholder="Somente números">
         </div>
       </div>
@@ -59,8 +59,8 @@
           <label for="tipoQuebra">TIPO DE QUEBRA</label>
           <select id="tipoQuebra" class="form-select" aria-label="Default select example" name="tipoQuebra">
             <option value="">-- Escolha a sua opção --</option>
-            <option value="total">TOTAL</option>
-            <option value="dif">DIFERENÇA</option>
+            <option value="integral">INTEGRAL</option>
+            <option value="parcial">PARCIAL</option>
           </select>
         </div>
       </div>
@@ -72,17 +72,17 @@
       </div>
       <div class="row mb-4">
         <div class="col-12">
-          <label for="pesoChegada">PESO CHEGADA</label>
+          <label for="pesoChegada">PESO CHEGADA (KG)</label>
           <input type="text" class="form-control" id="pesoChegada" name="pesoChegada" placeholder="Somente números">
         </div>
       </div>
       <div class="row mb-3 button-form-submit">
         <div class="col-12 mb-3">
-          <button class="btn btn-lg btn-calcdesconto">Calcular</button>
+          <button type="button" class="btn btn-lg btn-calcdesconto" onclick="calculoDesconto('form#formCalculoDesconto')">Calcular</button>
         </div>
         <hr>
         <div class="col-12">
-          <label for="valorDesconto">VALOR DESCONTO</label>
+          <label for="valorDesconto">VALOR DESCONTO (R$)</label>
           <input type="text" class="form-control" id="valorDesconto" name="valorDesconto" disabled>
         </div>
       </div>
