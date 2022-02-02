@@ -91,6 +91,10 @@
   width: 18rem;
 }
 
+#comments .container .row .card .card-title {
+  color: var(--orange);
+}
+
 #contacts {
   background-color: var(--orange);
   padding: 2rem 0;
