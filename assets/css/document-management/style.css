@@ -9,6 +9,7 @@
 #benefits p {
   margin-top: 1rem;
   font-size: 18px;
+  color: var(--grey);
 }
 
 #options {
