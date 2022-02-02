@@ -53,6 +53,71 @@ $(document).ready(function () {
     }
   );
 
+  $("#options .cards-solutions .col-lg-3").hover(
+    (e) => {
+      let img = e.currentTarget.childNodes[1].childNodes[1];
+      let imgSelect = e.currentTarget.childNodes[1].childNodes[1].alt;
+
+      switch (imgSelect) {
+        case "Security icon":
+          $(img).attr("src", "../assets/img/icons/security-white.svg");
+          break;
+        case "Card icon":
+          $(img).attr("src", "../assets/img/icons/card-white.svg");
+          break;
+        case "Time icon":
+          $(img).attr("src", "../assets/img/icons/time-white.svg");
+          break;
+        case "Posto icon":
+          $(img).attr("src", "../assets/img/icons/posto-white.svg");
+          break;
+        case "User security icon":
+          $(img).attr("src", "../assets/img/icons/user-security-white.svg");
+          break;
+        case "File icon":
+          $(img).attr("src", "../assets/img/icons/file-white.svg");
+          break;
+        case "Fone icon":
+          $(img).attr("src", "../assets/img/icons/fone-white.svg");
+          break;
+        case "Search icon":
+          $(img).attr("src", "../assets/img/icons/search-white.svg");
+          break;
+      }
+    },
+    (e) => {
+      let img = e.currentTarget.childNodes[1].childNodes[1];
+      let imgSelect = e.currentTarget.childNodes[1].childNodes[1].alt;
+
+      switch (imgSelect) {
+        case "Security icon":
+          $(img).attr("src", "../assets/img/icons/security.svg");
+          break;
+        case "Card icon":
+          $(img).attr("src", "../assets/img/icons/card.svg");
+          break;
+        case "Time icon":
+          $(img).attr("src", "../assets/img/icons/time.svg");
+          break;
+        case "Posto icon":
+          $(img).attr("src", "../assets/img/icons/posto.svg");
+          break;
+        case "User security icon":
+          $(img).attr("src", "../assets/img/icons/user-security.svg");
+          break;
+        case "File icon":
+          $(img).attr("src", "../assets/img/icons/file.svg");
+          break;
+        case "Fone icon":
+          $(img).attr("src", "../assets/img/icons/fone.svg");
+          break;
+        case "Search icon":
+          $(img).attr("src", "../assets/img/icons/search.svg");
+          break;
+      }
+    }
+  );
+
   $(window).scroll(function () {
     var documentTop = $(document).scrollTop(),
       targetClass = ".my-navbar-fixed",

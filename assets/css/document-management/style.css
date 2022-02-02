@@ -1,0 +1,114 @@
+@import "../colors.css";
+
+#benefits {
+  color: var(--primary-color);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#benefits p {
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+#options {
+  background-color: var(--grey-light);
+}
+
+#options .cards-solutions {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+#options .cards-solutions .col-lg-3 {
+  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+
+#options .cards-solutions .col-lg-3:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#options .cards-solutions .cards-solutions-item img {
+  padding-bottom: 2rem;
+}
+
+#options .cards-solutions .cards-solutions-item img.icon-file {
+  width: 8rem;
+}
+
+#options .cards-solutions .cards-solutions-item img.icon-file-2 {
+  width: 5rem;
+}
+
+#options .cards-solutions .cards-solutions-item img.icon-file-3 {
+  width: 4rem;
+}
+
+#options .cards-solutions .cards-solutions-item span a {
+  color: var(--primary-color);
+  display: block;
+}
+
+#options .cards-solutions .cards-solutions-item .title-bold {
+  text-transform: uppercase;
+}
+
+#how-works {
+  color: var(--primary-color);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#how-works .container .row {
+  padding: 1rem 0;
+}
+
+#video {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+#comments {
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#comments .container .row {
+  margin: 2rem 0;
+}
+
+#comments .container .row > div {
+  margin: 0.5rem 0;
+}
+
+#comments .container .row .card {
+  text-align: left;
+  margin: 0 auto;
+  width: 18rem;
+}
+
+#contacts {
+  background-color: var(--orange);
+  padding: 2rem 0;
+  color: var(--white);
+}
+
+#contacts .container .row {
+  align-items: center;
+}
+
+.btn-contacts {
+  color: var(--white);
+  border-radius: 2rem;
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.btn-contacts:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
