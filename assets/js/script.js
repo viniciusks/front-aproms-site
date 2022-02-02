@@ -173,7 +173,7 @@ function importComponents(path) {
     });
 }
 
-function calculoDesconto(selector) {
+function calculoQuebra(selector) {
   // Coleta de variáveis
   let pesoSaida = parseInt($(selector)[0][0].value);
   let valorMercadoria =
