@@ -52,3 +52,24 @@ section {
   background-color: var(--primary-color);
   color: var(--white);
 }
+
+#contacts {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+#contacts .container .row {
+  align-items: center;
+}
+
+.btn-contacts {
+  color: var(--white);
+  border-radius: 2rem;
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.btn-contacts:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
