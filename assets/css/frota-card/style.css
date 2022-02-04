@@ -1,9 +1,16 @@
 @import "../colors.css";
 
+section:first-child {
+  padding: 0 0;
+}
+
+section {
+  padding: 2rem 0;
+}
+
 #about-frota-card {
   text-align: center;
   color: var(--primary-color);
-  padding: 2rem 0;
 }
 
 #about-frota-card p {
@@ -13,9 +20,56 @@
 #options {
   text-align: center;
   background-color: var(--grey-light);
-  padding: 2rem 0;
+  color: var(--primary-color);
 }
 
 #options .container .row .col-lg-3 {
   margin: 1rem 0;
+}
+
+#options .container .row .col-lg-3 div {
+  padding-top: 1rem;
+}
+
+#benefits-frota {
+  color: var(--primary-color);
+  text-align: left;
+  align-items: center;
+}
+
+#benefits-frota .container .row div img {
+  width: 30rem;
+  float: right;
+}
+
+.btn-talk-to-team {
+  border-radius: 2rem;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-talk-to-team:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+#contacts {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+#contacts .container .row {
+  align-items: center;
+}
+
+.btn-contacts {
+  color: var(--white);
+  border-radius: 2rem;
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.btn-contacts:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
