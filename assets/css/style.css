@@ -368,8 +368,6 @@ footer .container ul li a.social-network:hover {
 .modal > div {
   width: 400px;
   position: relative;
-  margin: 10% auto;
-  padding: 15px 20px 15px 20px;
   background: #fff;
   border-radius: 5px;
   text-align: center;
@@ -377,10 +375,12 @@ footer .container ul li a.social-network:hover {
 
 #modalLogin.modal > div {
   padding: 60px 20px 15px 20px;
+  margin: 8rem auto;
 }
 
 #modalCalcDesconto.modal > div {
   padding: 30px 20px 15px 20px;
+  margin: 4rem auto;
 }
 
 .close {
