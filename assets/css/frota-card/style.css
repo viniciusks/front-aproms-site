@@ -42,15 +42,49 @@ section {
   float: right;
 }
 
-.btn-talk-to-team {
-  border-radius: 2rem;
-  border-color: var(--primary-color);
+#how-works-apromsnet {
+  text-align: center;
   color: var(--primary-color);
 }
 
-.btn-talk-to-team:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
+#how-works-apromsnet .container .row div {
+  margin: 1rem 0;
+}
+
+#security-practicality {
+  background-color: var(--grey-light);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#security-practicality .container .row .item-security-practicality {
+  margin: 1rem 0;
+}
+
+#security-practicality .container .row .item-security-practicality:first-child {
+  border-right: 1px solid var(--text-grey);
+}
+
+#security-practicality .container .row .item-security-practicality:last-child {
+  border-left: 1px solid var(--text-grey);
+}
+
+#security-practicality
+  .container
+  .row
+  .item-security-practicality
+  div:first-child {
+  margin-bottom: 4rem;
+}
+
+#security-practicality .container .row .item-security-practicality div img {
+  margin-bottom: 0.5rem;
+}
+
+#security-practicality .container .row .item-security-practicality div ul {
+  text-align: left;
+  color: var(--text-grey);
+  margin-left: 5%;
 }
 
 #contacts {
@@ -62,6 +96,7 @@ section {
   align-items: center;
 }
 
+/* BUTTONS */
 .btn-contacts {
   color: var(--white);
   border-radius: 2rem;
@@ -72,4 +107,33 @@ section {
 .btn-contacts:hover {
   background-color: var(--white);
   color: var(--orange);
+}
+
+.btn-talk-to-team {
+  border-radius: 2rem;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-talk-to-team:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 991px) {
+  #security-practicality
+    .container
+    .row
+    .item-security-practicality:first-child {
+    border-right: none;
+  }
+
+  #security-practicality
+    .container
+    .row
+    .item-security-practicality:last-child {
+    border-left: none;
+  }
 }
