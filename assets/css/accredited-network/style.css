@@ -123,8 +123,8 @@ section {
   width: 2rem;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
+#carouselApromsClients .carousel-control-next,
+#carouselApromsClients .carousel-control-prev {
   filter: invert(1);
 }
 
