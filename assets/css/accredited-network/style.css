@@ -1,0 +1,136 @@
+@import "../colors.css";
+
+section:first-child {
+  padding: 0;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+#benefits-accredited {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#benefits-accredited .container .row:first-child {
+  margin: 0;
+}
+
+#benefits-accredited .container .row {
+  margin: 5rem 0;
+}
+
+#benefits-accredited .container .row:last-child {
+  margin: 0;
+}
+
+#benefits-accredited .container .row .item-benefits-accredited img {
+  margin-bottom: 0.5rem;
+}
+
+#benefits-accredited .container .row .text-about-benefits {
+  color: var(--text-grey);
+}
+
+#benefits {
+  background-color: var(--grey-light);
+}
+
+#benefits .cards-benefits {
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--text-grey);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#benefits .cards-benefits:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#benefits .cards-benefits > * {
+  margin: 0.5rem 0;
+}
+
+#benefits .cards-benefits .cards-benefits-item {
+  flex-basis: 6rem;
+  flex-shrink: 0;
+}
+
+#benefits .cards-benefits .cards-benefits-item img.icon-file {
+  width: 4.5rem;
+}
+
+#benefits .cards-benefits .cards-benefits-item img.icon-file-2 {
+  width: 7rem;
+}
+
+#benefits .cards-benefits .cards-benefits-item img.icon-file-3 {
+  width: 6rem;
+}
+
+#aproms-accredited {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#aproms-accredited .container .row:first-child {
+  margin-bottom: 2rem;
+}
+
+#clients {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#clients .container .row:first-child {
+  margin-bottom: 2rem;
+}
+
+#contacts {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+#contacts .container .row {
+  align-items: center;
+}
+
+/* Buttons */
+.btn-contacts {
+  color: var(--white);
+  border-radius: 2rem;
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.btn-contacts:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* Carousel */
+#carouselApromsClients {
+  height: 10rem;
+}
+
+#carouselApromsClients .carousel-inner .carousel-item img {
+  margin: 0 1rem;
+  width: 2rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(1);
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 992px) {
+  #benefits-accredited .container .row .item-benefits-accredited {
+    margin: 1rem 0;
+  }
+}
