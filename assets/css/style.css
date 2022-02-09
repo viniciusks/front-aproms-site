@@ -25,7 +25,6 @@ body {
 
 .my-navbar-fixed {
   position: fixed;
-  display: none;
   padding: 1rem 4rem;
   background: var(--white) !important;
   border-bottom: 1px solid var(--primary-color);
@@ -117,20 +116,21 @@ section#about-aproms div.row h2 {
 /* SOLUTIONS */
 #solutions {
   background-color: var(--grey-light);
+  padding: 1.5rem 0;
 }
 
 #solutions .cards-solutions {
-  padding: 3rem 0;
   text-align: center;
+  margin: 0.5rem 0;
 }
 
-#solutions .cards-solutions .col {
+#solutions .cards-solutions {
   border-radius: 5px;
   color: var(--primary-color);
   padding: 1rem;
 }
 
-#solutions .cards-solutions .col:hover {
+#solutions .cards-solutions:hover {
   background-color: var(--primary-color);
   color: #fff;
 }
@@ -154,7 +154,6 @@ section#about-aproms div.row h2 {
 
 /* COMMERCIAL */
 #commercial .commercial-container {
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -314,14 +313,6 @@ section#about-aproms div.row h2 {
 footer {
   background-color: var(--grey);
   color: var(--white);
-}
-
-footer .flexbox {
-  align-items: flex-start;
-}
-
-footer .flexbox-item-footer {
-  flex-basis: 25%;
 }
 
 footer .container .logo-aproms {
@@ -485,4 +476,28 @@ div#modalCalcDesconto form .button-form-submit a {
 
 div#modalCalcDesconto form .button-form-submit a:hover {
   color: var(--orange);
+}
+
+/* Responsive */
+@media only screen and (max-width: 992px) {
+  .my-navbar {
+    display: none;
+  }
+
+  .my-navbar-fixed {
+    display: inline !important;
+    z-index: 999;
+  }
+
+  #banners {
+    padding-top: 6rem;
+  }
+
+  #commercial .commercial-container .commercial-img {
+    width: 25rem;
+  }
+
+  footer .row > div {
+    margin: 1rem 0;
+  }
 }

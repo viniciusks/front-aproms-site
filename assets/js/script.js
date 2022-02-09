@@ -2,7 +2,7 @@ importComponents(window.location.pathname);
 
 $(document).ready(function () {
   // Function Solutions Hover
-  $("#solutions .cards-solutions .col").hover(
+  $("#solutions .cards-solutions").hover(
     (e) => {
       let a = e.currentTarget.childNodes[5].childNodes[1].childNodes[1];
       let img = e.currentTarget.childNodes[1].childNodes[1];
@@ -185,15 +185,19 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     var documentTop = $(document).scrollTop(),
+      widthScreen = $(window).width(),
       targetClass = ".my-navbar-fixed",
       animationClass = "my-navbar-fixed-animation";
 
-    if (documentTop >= 100) {
-      if (!$(targetClass).hasClass(animationClass)) {
-        $(targetClass).addClass(animationClass).hide().fadeIn();
+    console.log(widthScreen);
+    if (widthScreen > 975) {
+      if (documentTop >= 100) {
+        if (!$(targetClass).hasClass(animationClass)) {
+          $(targetClass).addClass(animationClass).hide().fadeIn();
+        }
+      } else {
+        $(targetClass).removeClass(animationClass).fadeOut();
       }
-    } else {
-      $(targetClass).removeClass(animationClass).fadeOut();
     }
   });
 });
