@@ -480,6 +480,10 @@ div#modalCalcDesconto form .button-form-submit a:hover {
 
 /* Responsive */
 @media only screen and (max-width: 992px) {
+  #logoFixed.my-logo {
+    width: 5rem;
+  }
+
   .my-navbar {
     display: none;
   }
