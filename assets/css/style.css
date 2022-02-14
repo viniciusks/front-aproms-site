@@ -5,6 +5,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+section:first-child {
+  padding: 0 0;
+}
+
+section {
+  padding: 2rem 0;
+  color: var(--primary-color);
+}
+
 .fas {
   color: var(--orange);
 }

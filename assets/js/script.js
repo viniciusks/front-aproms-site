@@ -189,7 +189,6 @@ $(document).ready(function () {
       targetClass = ".my-navbar-fixed",
       animationClass = "my-navbar-fixed-animation";
 
-    console.log(widthScreen);
     if (widthScreen > 975) {
       if (documentTop >= 100) {
         if (!$(targetClass).hasClass(animationClass)) {
@@ -202,12 +201,12 @@ $(document).ready(function () {
   });
 });
 
-function showModal(selector) {
-  let divModal = $(selector);
+function showObject(selector) {
+  let divObject = $(selector);
 
-  divModal.hasClass("activeModal")
-    ? divModal.removeClass("activeModal").show().fadeOut()
-    : divModal.addClass("activeModal").hide().fadeIn();
+  divObject.hasClass("activeObject")
+    ? divObject.removeClass("activeObject").show().fadeOut()
+    : divObject.addClass("activeObject").hide().fadeIn();
 }
 
 function importComponents(path) {

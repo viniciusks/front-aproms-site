@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/utils.css">
+  <link rel="stylesheet" href="../assets/css/helper/style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.svg">
+  <title>APROMS | Associação dos Postos de MS</title>
+</head>
+
+<body>
+  <header></header>
+
+  <main>
+    <section id="banners">
+      <div id="carouselBannerApromsHelper" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/banners/banner-helper.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-left">
+            <div>
+              <h4><span class="title-bold">Entre em contato e esclareça suas dúvidas</span></h4>
+            </div>
+            <div class="title-light">
+              <span>Atendimento ao cliente</span>
+              <ul class="list-unstyled">
+                <li>
+                  <span>(67) 3424-9874</span>
+                </li>
+                <li>
+                  <span>(67) 99876-9849</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 text-left">
+            <div>
+              <h4><span class="title-bold">Acesse nossos termos</span></h4>
+            </div>
+            <div class="title-light">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="link-list" href="">Política de privacidade</a>
+                </li>
+                <li>
+                  <a class="link-list" href="">LGPD</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="can-i-help">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h4><span class="title-bold">Podemos ajudar?</span></h4>
+          </div>
+          <div>
+            <form action="">
+              <div class="row mb-3">
+                <div class="col-lg-8">
+                  <input type="text" class="form-control" id="doubt" name="doubt" placeholder="Digite sua pergunta">
+                </div>
+                <div class="col-lg-4">
+                  <button class="btn btn-doubt">Buscar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="doubts">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h4><span class="title-bold">Dúvidas frequentes</span></h4>
+          </div>
+          <div>
+            <ol class="doubts-list title-light">
+              <li onclick="showObject('div#doubt1')">
+                <span>O que é a APROMS NET?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <div id="doubt1">
+                <span>A APROMS NET é uma empresa de Pagamento Eletrônico de Frete que atua no mercado de transporte
+                  oferecendo soluções logísticas para seus clientes.</span>
+              </div>
+              <li onclick="showObject('div#doubt2')">
+                <span>Quais serviços a APROMS NET oferece?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <div id="doubt2">
+                <ul class="list-unstyled">
+                  <li>- Pagamento de documentos de frete;</li>
+                  <li>- Gestão de documentos;</li>
+                  <li>- Cartão Frota APROMS NET;</li>
+                  <li>- Cartão Frete APROMS NET;</li>
+                </ul>
+              </div>
+              <li onclick="showObject('div#doubt3')">
+                <span>Quem pode ser um credenciado APROMS NET?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <div id="doubt3">
+                <span>Podem fazer o credenciamento à rede APROMS NET os Postos de Combustíveis de
+                  Rodovia ou Urbanos e toda empresa que tenha relação comercial com o Motorista.</span>
+              </div>
+              <li onclick="showObject('div#doubt4')">
+                <span>Quais as vantagens em ser um Posto de Combustível credenciado APROMS NET?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <div id="doubt4">
+                <span>Ao se tornar um posto credenciado da APROMS NET você será parceiro de uma
+                  empresa consolidada no mercado, com mais de 150 transportadoras como clientes e
+                  seu posto ganhará visibilidade. Além de ser a empresa com a melhor taxa do mercado
+                  em custo/benefício, você ainda tem a tranquilidade e segurança de receber seu
+                  pagamento antes de enviar o documento original e com economias nas despesas de
+                  correio, pois precisará enviá-los para um único lugar, além de receber o pagamento 2
+                  vezes na semana, o que significa melhor fluxo de caixa para o seu posto.
+                  Você pode saber mais vantagens para o seu posto clicando aqui, ou entrando em
+                  contato com a nossa equipe. <a class="link-list" href="">Clique aqui para iniciar uma conversa no
+                    WhatsApp.</a></span>
+              </div>
+              <li onclick="showObject('div#doubt5')">
+                <span>Quais as vantagens em ser Rede de Apoio credenciada?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <div id="doubt5">
+                <span>Ao fazer parte da Rede de Apoio APROMS NET, sua empresa amplia a carteira de
+                  clientes, com maior segurança de recebimento em dia, melhorando seu fluxo de caixa.</span>
+              </div>
+              <li onclick="showObject('div#doubt6')">
+                <span>Como posso credenciar meu estabelicimento?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <div id="doubt6">
+                <span>Para se tornar um parceiro habilitado a atender e operar nossos produtos e/ou serviços
+                  basta entrar em contato com nossa equipe comercial através do número (67)
+                  99953-7804, ou ligue para nossa equipe para mais informações em (67) 3424-9876.</span>
+              </div>
+              <li>
+                <span>O que é o Cartão Frete?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <li>
+                <span>O que é o Cartão Frota?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <li>
+                <span>Como posso adquirir o Cartão Frete ou o Cartão Frota?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <li>
+                <span>Sou uma transportadora, quais as vantagens da APROMS NET para mim?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <li>
+                <span>Sou motorista, quais as vantagens da APROMS NET para mim?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+              <li>
+                <span>Tenho uma frota de veículos para administrar, quais as vantagens da APROMS NET para mim?</span>
+                <img src="../assets/img/icons/next.svg" alt="Next icon">
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <!-- Modal -->
+  <div id="modalContents"></div>
+
+  <script src="https://kit.fontawesome.com/7d0c01764d.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

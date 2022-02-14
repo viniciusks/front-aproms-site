@@ -1,0 +1,41 @@
+@import "../colors.css";
+
+.link-list {
+  color: var(--primary-color);
+}
+
+.link-list:hover {
+  color: var(--orange);
+}
+
+.btn-doubt {
+  border-radius: 2rem;
+  border-color: var(--orange);
+  color: var(--orange);
+  width: 8rem;
+}
+
+.btn-doubt:hover {
+  border-color: var(--grey-light);
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+#can-i-help {
+  background-color: var(--grey-light);
+}
+
+#doubts .doubts-list div {
+  display: none;
+  background-color: var(--grey-light);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+#doubts .doubts-list li {
+  cursor: pointer;
+}
+
+#doubts .doubts-list li img {
+  width: 2rem;
+}

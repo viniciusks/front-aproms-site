@@ -1,13 +1,5 @@
 @import "../colors.css";
 
-section:first-child {
-  padding: 0 0;
-}
-
-section {
-  padding: 2rem 0;
-}
-
 #about-frota-card {
   text-align: center;
   color: var(--primary-color);

@@ -54,3 +54,7 @@
 .title-light {
   font-weight: 300;
 }
+
+.text-left {
+  text-align: left;
+}
