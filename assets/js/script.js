@@ -10,19 +10,19 @@ $(document).ready(function () {
 
       switch (imgSelect) {
         case "File icon":
-          $(img).attr("src", "./assets/img/icons/file-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           $(a).css("color", "#fff");
           break;
         case "Card icon":
-          $(img).attr("src", "./assets/img/icons/card-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           $(a).css("color", "#fff");
           break;
         case "Frete icon":
-          $(img).attr("src", "./assets/img/icons/frete-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           $(a).css("color", "#fff");
           break;
         case "Posto icon":
-          $(img).attr("src", "./assets/img/icons/posto-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           $(a).css("color", "#fff");
           break;
       }
@@ -34,19 +34,19 @@ $(document).ready(function () {
 
       switch (imgSelect) {
         case "File icon":
-          $(img).attr("src", "./assets/img/icons/file.svg");
+          $(img).css("filter", "brightness(1)");
           $(a).css("color", "#005e91");
           break;
         case "Card icon":
-          $(img).attr("src", "./assets/img/icons/card.svg");
+          $(img).css("filter", "brightness(1)");
           $(a).css("color", "#005e91");
           break;
         case "Frete icon":
-          $(img).attr("src", "./assets/img/icons/frete.svg");
+          $(img).css("filter", "brightness(1)");
           $(a).css("color", "#005e91");
           break;
         case "Posto icon":
-          $(img).attr("src", "./assets/img/icons/posto.svg");
+          $(img).css("filter", "brightness(1)");
           $(a).css("color", "#005e91");
           break;
       }
