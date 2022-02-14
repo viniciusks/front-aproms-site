@@ -60,28 +60,28 @@ $(document).ready(function () {
 
       switch (imgSelect) {
         case "Security icon":
-          $(img).attr("src", "../assets/img/icons/security-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Card icon":
-          $(img).attr("src", "../assets/img/icons/card-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Time icon":
-          $(img).attr("src", "../assets/img/icons/time-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Posto icon":
-          $(img).attr("src", "../assets/img/icons/posto-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "User security icon":
-          $(img).attr("src", "../assets/img/icons/user-security-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "File icon":
-          $(img).attr("src", "../assets/img/icons/file-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Fone icon":
-          $(img).attr("src", "../assets/img/icons/fone-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Search icon":
-          $(img).attr("src", "../assets/img/icons/search-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
       }
     },
@@ -91,28 +91,28 @@ $(document).ready(function () {
 
       switch (imgSelect) {
         case "Security icon":
-          $(img).attr("src", "../assets/img/icons/security.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Card icon":
-          $(img).attr("src", "../assets/img/icons/card.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Time icon":
-          $(img).attr("src", "../assets/img/icons/time.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Posto icon":
-          $(img).attr("src", "../assets/img/icons/posto.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "User security icon":
-          $(img).attr("src", "../assets/img/icons/user-security.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "File icon":
-          $(img).attr("src", "../assets/img/icons/file.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Fone icon":
-          $(img).attr("src", "../assets/img/icons/fone.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Search icon":
-          $(img).attr("src", "../assets/img/icons/search.svg");
+          $(img).css("filter", "brightness(1)");
           break;
       }
     }
@@ -125,28 +125,28 @@ $(document).ready(function () {
 
       switch (imgSelect) {
         case "Dolar icon":
-          $(img).attr("src", "../assets/img/icons/dolar-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Truck 2 icon":
-          $(img).attr("src", "../assets/img/icons/truck-2-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Mail icon":
-          $(img).attr("src", "../assets/img/icons/mail-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Hand dolar icon":
-          $(img).attr("src", "../assets/img/icons/hand-dolar-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Fone icon":
-          $(img).attr("src", "../assets/img/icons/fone-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "Percent icon":
-          $(img).attr("src", "../assets/img/icons/percent-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "File icon":
-          $(img).attr("src", "../assets/img/icons/file-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
         case "User security icon":
-          $(img).attr("src", "../assets/img/icons/user-security-white.svg");
+          $(img).css("filter", "brightness(0) invert(1)");
           break;
       }
     },
@@ -156,28 +156,28 @@ $(document).ready(function () {
 
       switch (imgSelect) {
         case "Dolar icon":
-          $(img).attr("src", "../assets/img/icons/dolar.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Truck 2 icon":
-          $(img).attr("src", "../assets/img/icons/truck-2.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Mail icon":
-          $(img).attr("src", "../assets/img/icons/mail.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Hand dolar icon":
-          $(img).attr("src", "../assets/img/icons/hand-dolar.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Fone icon":
-          $(img).attr("src", "../assets/img/icons/fone.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "Percent icon":
-          $(img).attr("src", "../assets/img/icons/percent.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "File icon":
-          $(img).attr("src", "../assets/img/icons/file.svg");
+          $(img).css("filter", "brightness(1)");
           break;
         case "User security icon":
-          $(img).attr("src", "../assets/img/icons/user-security.svg");
+          $(img).css("filter", "brightness(1)");
           break;
       }
     }
