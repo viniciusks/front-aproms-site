@@ -199,6 +199,13 @@ $(document).ready(function () {
       }
     }
   });
+
+  $("#doubt-list li").on("click", (e) => {
+    let id = e.currentTarget.id;
+    let div = "div#doubt" + id;
+
+    showObject(div);
+  });
 });
 
 function showObject(selector) {
