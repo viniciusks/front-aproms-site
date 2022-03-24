@@ -38,7 +38,11 @@ section {
   background: var(--white) !important;
   border-bottom: 1px solid var(--primary-color);
   width: 100%;
-  z-index: -1;
+  z-index: 999;
+}
+
+#banners {
+  padding-top: 6rem;
 }
 
 .my-navbar-fixed-animation {
@@ -48,20 +52,20 @@ section {
 .my-navbar-fixed #navbarSupportedContentFixed .nav-item .nav-link {
   text-transform: uppercase;
   font-weight: normal;
-  color: var(--orange) !important;
+  color: var(--primary-color) !important;
   padding: 0 0.8rem !important;
 }
 
 .my-navbar-fixed #navbarSupportedContentFixed .btn-access-system {
   background: transparent;
-  border: 1px solid var(--orange);
+  border: 1px solid var(--primary-color);
   border-radius: 2rem;
-  color: var(--orange);
+  color: var(--primary-color);
   text-transform: uppercase;
 }
 
 .my-navbar-fixed #navbarSupportedContentFixed .btn-access-system:hover {
-  background: var(--orange);
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -497,14 +501,14 @@ div#modalCalcDesconto form .button-form-submit a:hover {
     display: none;
   }
 
-  .my-navbar-fixed {
+  /* .my-navbar-fixed {
     display: inline !important;
     z-index: 999;
-  }
+  } */
 
-  #banners {
+  /* #banners {
     padding-top: 6rem;
-  }
+  } */
 
   #commercial .commercial-container .commercial-img {
     width: 25rem;

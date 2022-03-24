@@ -183,22 +183,22 @@ $(document).ready(function () {
     }
   );
 
-  $(window).scroll(function () {
-    var documentTop = $(document).scrollTop(),
-      widthScreen = $(window).width(),
-      targetClass = ".my-navbar-fixed",
-      animationClass = "my-navbar-fixed-animation";
+  // $(window).scroll(function () {
+  //   var documentTop = $(document).scrollTop(),
+  //     widthScreen = $(window).width(),
+  //     targetClass = ".my-navbar-fixed",
+  //     animationClass = "my-navbar-fixed-animation";
 
-    if (widthScreen > 975) {
-      if (documentTop >= 100) {
-        if (!$(targetClass).hasClass(animationClass)) {
-          $(targetClass).addClass(animationClass).hide().fadeIn();
-        }
-      } else {
-        $(targetClass).removeClass(animationClass).fadeOut();
-      }
-    }
-  });
+  //   if (widthScreen > 975) {
+  //     if (documentTop >= 100) {
+  //       if (!$(targetClass).hasClass(animationClass)) {
+  //         $(targetClass).addClass(animationClass).hide().fadeIn();
+  //       }
+  //     } else {
+  //       $(targetClass).removeClass(animationClass).fadeOut();
+  //     }
+  //   }
+  // });
 
   $("#doubt-list li").on("click", (e) => {
     let id = e.currentTarget.id;
