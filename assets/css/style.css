@@ -126,6 +126,11 @@ section#about-aproms div.row h2 {
   font-weight: 300;
 }
 
+section#partner {
+  padding: 0;
+  color: var(--primary-color);
+}
+
 /* SOLUTIONS */
 #solutions {
   background-color: var(--grey-light);
@@ -491,6 +496,10 @@ div#modalCalcDesconto form .button-form-submit a:hover {
   color: var(--orange);
 }
 
+ol#doubt-list > * {
+  margin: 0.5rem 0;
+}
+
 /* Responsive */
 @media only screen and (max-width: 992px) {
   #logoFixed.my-logo {
@@ -506,9 +515,9 @@ div#modalCalcDesconto form .button-form-submit a:hover {
     z-index: 999;
   } */
 
-  /* #banners {
-    padding-top: 6rem;
-  } */
+  #banners {
+    padding-top: 4rem;
+  }
 
   #commercial .commercial-container .commercial-img {
     width: 25rem;

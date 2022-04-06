@@ -208,6 +208,35 @@ $(document).ready(function () {
   });
 });
 
+function searchAnwser() {
+  let doubt = $("input#doubt").val();
+  let selector = $("ol#doubt-list");
+
+  for (let index = 0; index < selector[0].children.length; index++) {
+    const element = $("li#" + (index + 1));
+
+    element[0].className = "";
+
+    if (index + 1 == 25) {
+      break;
+    }
+  }
+
+  for (let index = 0; index < selector[0].children.length; index++) {
+    const element = $("li#" + (index + 1));
+    const data = element[0].childNodes[1].childNodes[0].data;
+
+    if (data.indexOf(doubt) != -1) {
+      console.log(element);
+      element[0].className = "doubt-selected";
+    }
+
+    if (index + 1 == 25) {
+      break;
+    }
+  }
+}
+
 function showObject(selector) {
   let divObject = $(selector);
 
