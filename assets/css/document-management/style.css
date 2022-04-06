@@ -87,9 +87,9 @@
 }
 
 #comments .container .row .card {
-  text-align: left;
+  text-align: justify;
   margin: 0 auto;
-  width: 18rem;
+  width: 100%;
 }
 
 #comments .container .row .card .card-title {

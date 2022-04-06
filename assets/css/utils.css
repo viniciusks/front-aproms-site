@@ -59,7 +59,6 @@
   text-align: left;
 }
 
-.doubt-selected {
-  background-color: var(--orange);
-  border-radius: 5px;
+.doubt-noselected {
+  display: none;
 }

@@ -226,9 +226,9 @@ function searchAnwser() {
     const element = $("li#" + (index + 1));
     const data = element[0].childNodes[1].childNodes[0].data;
 
-    if (data.indexOf(doubt) != -1) {
+    if (data.indexOf(doubt) == -1) {
       console.log(element);
-      element[0].className = "doubt-selected";
+      element[0].className = "doubt-noselected";
     }
 
     if (index + 1 == 25) {
