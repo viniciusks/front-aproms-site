@@ -200,6 +200,14 @@ $(document).ready(function () {
   //   }
   // });
 
+  const inputDoubt = document.getElementById("doubt");
+  inputDoubt.addEventListener("keyup", function (e) {
+    var key = e.which || e.keyCode;
+    if (key == 13) {
+      searchAnwser();
+    }
+  });
+
   $("#doubt-list li").on("click", (e) => {
     let id = e.currentTarget.id;
     let div = "div#doubt" + id;
@@ -209,7 +217,7 @@ $(document).ready(function () {
 });
 
 function searchAnwser() {
-  let doubt = $("input#doubt").val();
+  let doubt = $("input#doubt").val().toLowerCase();
   let selector = $("ol#doubt-list");
 
   for (let index = 0; index < selector[0].children.length; index++) {
@@ -224,10 +232,9 @@ function searchAnwser() {
 
   for (let index = 0; index < selector[0].children.length; index++) {
     const element = $("li#" + (index + 1));
-    const data = element[0].childNodes[1].childNodes[0].data;
+    const data = element[0].childNodes[1].childNodes[0].data.toLowerCase();
 
     if (data.indexOf(doubt) == -1) {
-      console.log(element);
       element[0].className = "doubt-noselected";
     }
 
