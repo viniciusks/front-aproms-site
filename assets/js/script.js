@@ -315,3 +315,38 @@ function calculoQuebra(selector) {
 
   valorDesconto.value = parseFloat(desconto.toFixed(2));
 }
+
+function loginsis(e) {
+  var cPar =
+    "par=" +
+    $("#cnpj").val() +
+    ";" +
+    $("#login").val() +
+    ";" +
+    $("#pass").val();
+
+  console.log(cPar);
+
+  $.ajax({
+    // url: "/aproms/aproms.dll/login?" + cPar,
+    // ajax.open('POST', ambiente+"aproms.dll/esqueci?" + cPar, true);
+    // ConfConexao(cnt,Request.URL);
+    url: "/aproms/" + "aproms.dll/login?" + cPar,
+    dataType: "text",
+    success: function (resposta) {
+      $("#loaderLote").addClass("d-none");
+      $("#loaderLote").removeClass("d-block");
+
+      document.getElementById("login").disabled = false;
+      var result = resposta.slice(0, 3);
+      if (result == "SIM") {
+        res = resposta.slice(3, resposta.length);
+        window.location.href = "/aproms/aproms.dll/restrito?id=" + res;
+      } else if (result == "ALT") {
+        $("#altearaSenha").modal("show");
+      } else if (result == "NAO") {
+        dialogNao();
+      }
+    },
+  });
+}
