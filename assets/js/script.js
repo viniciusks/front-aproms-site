@@ -345,7 +345,7 @@ function loginsis(e) {
       } else if (result == "ALT") {
         $("#altearaSenha").modal("show");
       } else if (result == "NAO") {
-        dialogNao();
+        showObject("#userFail");
       }
     },
   });
