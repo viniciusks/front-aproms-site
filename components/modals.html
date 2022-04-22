@@ -25,10 +25,11 @@
       </div>
       <div class="row mb-3 button-form-submit">
         <div class="col-12 mb-3">
-          <button type="button" class="btn btn-lg btn-login" onclick="loginsis()">Login</button>
+          <button type="button" class="btn btn-lg btn-login" onclick="loginSystem()">Login</button>
         </div>
         <div class="col-12">
-          <a href="">Esqueci minha senha</a>
+          <button type="button" class="forgot-password" onclick="showObject('div#modalForgotPassword')">Esqueci minha
+            senha</button>
         </div>
       </div>
     </form>
@@ -85,6 +86,38 @@
         <div class="col-12">
           <label for="valorDesconto">VALOR DESCONTO (R$)</label>
           <input type="text" class="form-control" id="valorDesconto" name="valorDesconto" disabled>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="modalForgotPassword" class="modal">
+  <div>
+    <a title="Fechar" class="close btn-access-system" onclick="showObject('div#modalForgotPassword', 1)"><i
+        class="fas fa-times"></i></a>
+    <h2 class="mb-3">Recuperar senha</h2>
+    <form action="">
+      <div class="row mb-3">
+        <div class="col-12">
+          <small class="m">Para recuperar sua senha, informe CNPJ e login ou email para receber instruções no seu
+            email</small>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="cnpjForgot">CNPJ</label>
+          <input type="text" class="form-control" id="cnpjForgot" name="cnpjForgot" placeholder="Somente números">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="userOrEmail">Usuário ou email</label>
+          <input type="text" class="form-control" id="userOrEmail" name="userOrEmail" placeholder="Não use espaços">
+        </div>
+      </div>
+      <div class="row mb-3 button-form-submit">
+        <div class="col-12 mb-3">
+          <button type="button" class="btn btn-forgot" onclick="loginForgot()">Enviar</button>
         </div>
       </div>
     </form>

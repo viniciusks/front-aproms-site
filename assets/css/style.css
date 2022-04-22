@@ -387,6 +387,11 @@ footer .container ul li a.social-network:hover {
   margin: 8rem auto;
 }
 
+#modalForgotPassword.modal > div {
+  padding: 20px;
+  margin: 8rem auto;
+}
+
 #modalCalcDesconto.modal > div {
   padding: 30px 20px 15px 20px;
   margin: 4rem auto;
@@ -454,12 +459,14 @@ div#modalLogin form .button-form-submit .btn-login:hover {
   color: var(--white);
 }
 
-div#modalLogin form .button-form-submit a {
+div#modalLogin form .button-form-submit button.forgot-password {
   color: var(--grey);
   text-decoration: none;
+  background: transparent;
+  border: none;
 }
 
-div#modalLogin form .button-form-submit a:hover {
+div#modalLogin form .button-form-submit button.forgot-password:hover {
   color: var(--orange);
 }
 
@@ -498,6 +505,26 @@ div#modalCalcDesconto form .button-form-submit a:hover {
 
 ol#doubt-list > * {
   margin: 0.5rem 0;
+}
+
+/* MODAL forgot */
+div#modalForgotPassword form {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+div#modalForgotPassword form .button-form-submit .btn-forgot {
+  background-color: transparent;
+  border-radius: 2rem;
+  color: var(--orange);
+  border-color: var(--orange);
+  width: 100%;
+}
+
+div#modalForgotPassword form .button-form-submit .btn-forgot:hover {
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 /* Responsive */

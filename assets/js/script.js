@@ -244,7 +244,11 @@ function searchAnwser() {
   }
 }
 
-function showObject(selector) {
+function showObject(selector, type=0) {
+  if (selector == "div#modalForgotPassword" && type == 0) {
+    $("div#modalLogin").removeClass("activeObject").show().fadeOut();
+  }
+
   let divObject = $(selector);
 
   divObject.hasClass("activeObject")
@@ -316,7 +320,7 @@ function calculoQuebra(selector) {
   valorDesconto.value = parseFloat(desconto.toFixed(2));
 }
 
-function loginsis(e) {
+function loginSystem() {
   var cPar =
     "par=" +
     $("#cnpj").val() +
@@ -325,13 +329,8 @@ function loginsis(e) {
     ";" +
     $("#pass").val();
 
-  console.log(cPar);
-
   $.ajax({
-    // url: "/aproms/aproms.dll/login?" + cPar,
-    // ajax.open('POST', ambiente+"aproms.dll/esqueci?" + cPar, true);
-    // ConfConexao(cnt,Request.URL);
-    url: "/aproms/" + "aproms.dll/login?" + cPar,
+    url: "/aproms/aproms.dll/login?" + cPar,
     dataType: "text",
     success: function (resposta) {
       $("#loaderLote").addClass("d-none");
@@ -349,4 +348,35 @@ function loginsis(e) {
       }
     },
   });
+}
+
+function loginForgot() {
+  var ajax = ajaxInit();
+  let email = $("#userOrEmail").val();
+  let cnpj = $("#cnpjForgot").val();
+  var cPar = "par=" + cnpj + ";" + email;
+  var res = "N";
+  var av = "N";
+
+  if (ajax) {
+    ajax.open("POST", "/aproms/aproms.dll/esqueci?" + cPar, true);
+
+    ajax.onreadystatechange = function () {
+      if (ajax.responseText.slice(0, 3) == "SIM" && av == "N") {
+        av = "S";
+        res = "S";
+        document.querySelector(".textEmail").innerHTML =
+          "Senha enviada no email:<br/>" +
+          ajax.responseText.slice(3, ajax.responseText.length);
+        alert("Senha enviada ao email: " + email);
+      } else if (ajax.responseText.slice(0, 3) == "NAO" && av == "N") {
+        av = "S";
+        alert("Usuário não encontrado.");
+      } else if (ajax.responseText.slice(0, 4) == "ERRO" && av == "N") {
+        av = "S";
+        alert("Erro ao tentar enviar a senha");
+      }
+    };
+    ajax.send(null);
+  }
 }
