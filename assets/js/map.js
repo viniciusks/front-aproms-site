@@ -64,23 +64,19 @@ function mostrapostomapa(posicao) {
   var cPar = "par=COOR;" + res;
 
   if (ajax) {
-    ajax.open(
-      "POST",
-      "../aproms/aproms.dll/dadosposto?" + cPar,
-      true
-    );
+    ajax.open("POST", "../aproms/aproms.dll/dadosposto?" + cPar, true);
     ajax.setRequestHeader("http-equiv", "pragma");
     ajax.setRequestHeader("content", "no-cache");
     ajax.onreadystatechange = function () {
       if (ajax.responseText.slice(0, 3) == "SIM") {
-        // $("#float-dados").fadeIn(500);
-        // document.getElementById("float-dados").innerHTML =
-        //   ajax.responseText.slice(3, ajax.responseText.lenght);
-        // ok = "S";
+        $("#float-dados").fadeIn(500);
+        document.getElementById("float-dados").innerHTML =
+          ajax.responseText.slice(3, ajax.responseText.lenght);
+        ok = "S";
       } else if (ajax.responseText.slice(0, 3) == "NAO") {
-        // $("#float-dados").fadeIn(500);
-        // document.getElementById("float-dados").innerHTML =
-        //   ajax.responseText.slice(3, ajax.responseText.lenght);
+        $("#float-dados").fadeIn(500);
+        document.getElementById("float-dados").innerHTML =
+          ajax.responseText.slice(3, ajax.responseText.lenght);
       }
     };
     ajax.send(null);

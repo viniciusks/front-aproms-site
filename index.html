@@ -169,36 +169,17 @@
                 <div class="div-start mb-3">
                   <label for="start" class="form-label">Início</label>
                   <div>
-                    <select class="form-select">
-                      <option selected>Selecione um estado</option>
-                      <option value="1">SP</option>
-                      <option value="2">MS</option>
-                      <option value="3">PR</option>
-                    </select>
-                    <select class="form-select">
-                      <option selected>Selecione uma cidade</option>
-                      <option value="1">São Paulo</option>
-                      <option value="2">Dourados</option>
-                      <option value="3">Curitiba</option>
-                    </select>
+                    <select id="startState" class="form-select"
+                      onchange="chooseCity('startState','startCity')"></select>
+                    <select id="startCity" class="form-select"></select>
                   </div>
                 </div>
 
                 <div class="div-end mb-3">
                   <label for="end" class="form-label">Final</label>
                   <div>
-                    <select class="form-select">
-                      <option selected>Selecione um estado</option>
-                      <option value="1">SP</option>
-                      <option value="2">MS</option>
-                      <option value="3">PR</option>
-                    </select>
-                    <select class="form-select">
-                      <option selected>Selecione uma cidade</option>
-                      <option value="1">São Paulo</option>
-                      <option value="2">Dourados</option>
-                      <option value="3">Curitiba</option>
-                    </select>
+                    <select id="endState" class="form-select" onchange="chooseCity('endState','endCity')"></select>
+                    <select id="endCity" class="form-select"></select>
                   </div>
                 </div>
 

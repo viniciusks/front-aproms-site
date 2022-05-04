@@ -382,3 +382,65 @@ function loginForgot() {
     ajax.send(null);
   }
 }
+
+function loadStates() {
+  $.ajax({
+    url: "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
+    dataType: "json",
+    success: function (response) {
+      let startState = $("#startState");
+      let endState = $("#endState");
+      let contentState = "<option selected>Selecione um estado</option>";
+
+      response.forEach((uf) => {
+        let value = "<option value='" + uf.sigla + "'>" + uf.nome + "</option>";
+        contentState += value;
+      });
+
+      startState.html(contentState);
+      endState.html(contentState);
+    },
+    error: function (response) {
+      console.log(response);
+    },
+  });
+}
+
+function chooseCity(idState, idCity) {
+  let selectStates = $("#" + idState)[0];
+  let selectCities = $("#" + idCity);
+  let uf = selectStates.options[selectStates.selectedIndex].value;
+  let contentCities = "<option selected>Selecione uma cidade</option>";
+
+  $.ajax({
+    url:
+      "https://servicodados.ibge.gov.br/api/v1/localidades/estados/" +
+      uf +
+      "/municipios",
+    dataType: "json",
+    success: function (response) {
+      response.forEach((city) => {
+        let value =
+          "<option value='" + city.nome + "'>" + city.nome + "</option>";
+        contentCities += value;
+      });
+
+      selectCities.html(contentCities);
+    },
+    error: function (response) {
+      console.log(response);
+    },
+  });
+}
+
+function configInputDoubt() {
+  const inputDoubt = document.getElementById("doubt");
+  if (inputDoubt) {
+    inputDoubt.addEventListener("keyup", function (e) {
+      var key = e.which || e.keyCode;
+      if (key == 13) {
+        searchAnwser();
+      }
+    });
+  }
+}
