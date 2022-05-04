@@ -397,6 +397,12 @@ footer .container ul li a.social-network:hover {
   margin: 4rem auto;
 }
 
+#modalLGPD.modal > div {
+  padding: 30px 20px 15px 20px;
+  margin: 4rem auto;
+  text-align: left;
+}
+
 .close {
   position: absolute;
   width: 30px;
