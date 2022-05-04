@@ -201,12 +201,14 @@ $(document).ready(function () {
   // });
 
   const inputDoubt = document.getElementById("doubt");
-  inputDoubt.addEventListener("keyup", function (e) {
-    var key = e.which || e.keyCode;
-    if (key == 13) {
-      searchAnwser();
-    }
-  });
+  if (inputDoubt) {
+    inputDoubt.addEventListener("keyup", function (e) {
+      var key = e.which || e.keyCode;
+      if (key == 13) {
+        searchAnwser();
+      }
+    });
+  }
 
   $("#doubt-list li").on("click", (e) => {
     let id = e.currentTarget.id;
@@ -244,7 +246,7 @@ function searchAnwser() {
   }
 }
 
-function showObject(selector, type=0) {
+function showObject(selector, type = 0) {
   if (selector == "div#modalForgotPassword" && type == 0) {
     $("div#modalLogin").removeClass("activeObject").show().fadeOut();
   }
