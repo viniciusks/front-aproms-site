@@ -395,7 +395,7 @@ footer .container ul li a.social-network:hover {
 #modalCalcDesconto.modal > div {
   width: 70%;
   padding: 30px 20px 15px 20px;
-  margin: 0.25rem auto;
+  margin: 2% auto;
 }
 
 #modalLGPD.modal > div {
@@ -501,6 +501,8 @@ div#modalCalcDesconto form {
 
 div#modalCalcDesconto form .button-form-submit {
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 div#modalCalcDesconto form .button-form-submit .btn-calcdesconto {
