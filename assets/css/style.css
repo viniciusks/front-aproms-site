@@ -393,14 +393,30 @@ footer .container ul li a.social-network:hover {
 }
 
 #modalCalcDesconto.modal > div {
+  width: 70%;
   padding: 30px 20px 15px 20px;
-  margin: 4rem auto;
+  margin: 0.25rem auto;
 }
 
 #modalLGPD.modal > div {
   padding: 30px 20px 15px 20px;
   margin: 4rem auto;
   text-align: left;
+}
+
+#modalCalcDesconto .close {
+  position: absolute;
+  width: 30px;
+  right: 2px;
+  top: -4px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+  cursor: pointer;
 }
 
 .close {
@@ -533,6 +549,20 @@ div#modalForgotPassword form .button-form-submit .btn-forgot:hover {
   color: var(--white);
 }
 
+/* FORM */
+.innerform-flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.innerform-flexbox .item-innerform-flexbox {
+  order: 3;
+  flex-grow: 1;
+  align-self: center;
+}
+
 /* Responsive */
 @media only screen and (max-width: 992px) {
   #logoFixed.my-logo {
@@ -558,5 +588,11 @@ div#modalForgotPassword form .button-form-submit .btn-forgot:hover {
 
   footer .row > div {
     margin: 1rem 0;
+  }
+
+  #modalCalcDesconto.modal > div {
+    width: 100%;
+    margin: 1rem auto;
+    border: 1px var(--primary-color) solid;
   }
 }

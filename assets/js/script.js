@@ -322,6 +322,128 @@ function calculoQuebra(selector) {
   valorDesconto.value = parseFloat(desconto.toFixed(2));
 }
 
+function calculoQuebra2(selector) {
+  // Coleta de variáveis
+  let pesoSaida = parseInt($(selector)[0][0].value); // EM KG
+  let valorMercadoria =
+    parseFloat($(selector)[0][1].value.replace(",", ".")) / pesoSaida; // VALOR POR KG
+  let tipoQuebra = $(selector)[0][2].value; // TOTAL OU PARCIAL
+  let tolerancia = parseFloat($(selector)[0][3].value.replace(",", ".")); // PERCENTUAL
+  let pesoChegada = parseInt($(selector)[0][4].value); // EM KG
+  let valorDesconto = parseFloat($(selector)[0][5].value.replace(",", ".")); // EM REAIS
+  let valorCFrete = parseFloat($(selector)[0][6].value.replace(",", "."));
+  let adicionais = parseFloat($(selector)[0][7].value.replace(",", "."));
+
+  let bEstadia = $(selector)[0][8]; // boolean
+  let bPedagio = $(selector)[0][9]; // boolean
+  let dICMS = parseFloat($(selector)[0][10].value.replace(",", "."));
+  let dSegCarga = parseFloat($(selector)[0][11].value.replace(",", "."));
+  let dIRFonte = parseFloat($(selector)[0][12].value.replace(",", "."));
+  let dINSS = parseFloat($(selector)[0][13].value.replace(",", "."));
+  let dSESTSENAT = parseFloat($(selector)[0][14].value.replace(",", "."));
+  let dAdiantamento = parseFloat($(selector)[0][15].value.replace(",", "."));
+  let dTaxaAdm = parseFloat($(selector)[0][16].value.replace(",", "."));
+  let dOutros = parseFloat($(selector)[0][17].value.replace(",", "."));
+
+  let pedagio = parseFloat($(selector)[0][18].value.replace(",", "."));
+  let estadia = parseFloat($(selector)[0][19].value.replace(",", "."));
+
+  /* let valorCFrete = 10050.43;  // PODE NÃO HAVER valor do frete
+    let adicionais = 0; // sempre em zero*/
+
+  /* let bEstadia = false; // inserido do adiantamento
+    let bPedagio = false; // inserido do adiantamento
+    let dICMS = 0;
+    let dSegCarga = 89.67;
+    let dIRFonte = 0;
+    let dINSS = 0;
+    let dSESTSENAT = 0;
+    let dAdiantamento = 8605.00;
+    let dTaxaAdm = 0;
+    let dOutros = 8.90;
+
+    let pedagio = 706.80;
+    let estadia  = 0;
+    */
+
+  // Somar Descontos independentes
+  let totalDescontos =
+    dICMS +
+    dSegCarga +
+    dIRFonte +
+    dINSS +
+    dSESTSENAT +
+    dAdiantamento +
+    dTaxaAdm +
+    dOutros;
+
+  if (!bPedagio) {
+    adicionais += pedagio;
+  }
+
+  if (!bEstadia) {
+    adicionais += estadia;
+  }
+
+  /* let pesoSaida = 39840;   // EM KG
+    let valorMercadoria = 110224 / pesoSaida; // VALOR POR KG
+    let tipoQuebra = "parcial";            // TOTAL OU PARCIAL
+    let tolerancia = 0.25; // PERCENTUAL
+    let pesoChegada = 39900; // EM KG  */
+
+  let difPeso = pesoSaida - pesoChegada; // KG
+
+  let ret_pesoCalculo;
+  let ret_descQuebra;
+
+  // Primeiro passo
+  // Cálculo do valor da tolerância da quebra
+  let pesoLimQuebra = pesoSaida * (tolerancia / 100);
+
+  // Indicação de qual peso será utilizado para cálculo de pagamento
+  if (pesoChegada > pesoSaida) {
+    ret_pesoCalculo = pesoSaida;
+    ret_descQuebra = 0;
+    perdaExcedente = 0;
+  } else {
+    ret_pesoCalculo = pesoChegada;
+
+    perdaExcedente = difPeso - pesoLimQuebra;
+    // Se a quebra foi menor que a tolerância (em KG)
+    if (perdaExcedente > 0) {
+      // Cáculo da quebra, divido em PARCIAL e TOTAL
+      if (tipoQuebra == "parcial") {
+        ret_descQuebra = valorMercadoria * perdaExcedente;
+      } else {
+        // TOTAL
+        ret_descQuebra = valorMercadoria * difPeso;
+      }
+    } else {
+      ret_descQuebra = 0;
+    }
+  }
+
+  console.log("Peso Saida: (Kg)", pesoSaida);
+  console.log("Peso Chegada: (Kg)", pesoChegada);
+  console.log("Diferença Peso: ", difPeso);
+  console.log("Tolerância: (Kg)", pesoLimQuebra);
+  console.log("Valor Mercadoria Por Kg: ", valorMercadoria.toFixed(2));
+  console.log("Valor do Documento de Frete: (R$)", valorCFrete.toFixed(2));
+  console.log("Valor de adiantamento: (R$)", dAdiantamento.toFixed(2));
+  console.log("Valor Descontos", totalDescontos.toFixed(2));
+
+  console.log("Perda Excedente: ", perdaExcedente);
+  console.log("Valor da quebra: (R$)", ret_descQuebra.toFixed(2));
+
+  if (valorCFrete > 0)
+    console.log(
+      "Valor à pagar: (R$)",
+      (valorCFrete - ret_descQuebra - totalDescontos + adicionais).toFixed(2)
+    );
+  else console.log("Sem valor da carta frete.");
+  // valorDesconto.value = parseFloat(ret_descQuebra.toFixed(2));
+}
+
 function loginSystem() {
   var cPar =
     "par=" +
