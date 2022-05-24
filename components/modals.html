@@ -76,8 +76,6 @@
                 placeholder="Somente números">
             </div>
           </div>
-        </div>
-        <div class="item-innerform-flexbox">
           <div class="row mb-3">
             <div class="col-12">
               <label for="tipoQuebra">TIPO DE QUEBRA</label>
@@ -88,6 +86,8 @@
               </select>
             </div>
           </div>
+        </div>
+        <div class="item-innerform-flexbox">
           <div class="row mb-3">
             <div class="col-12">
               <label for="tolerancia">% TOLERANCIA</label>
@@ -97,57 +97,70 @@
           <div class="row mb-3">
             <div class="col-12">
               <label for="valorPedagio">VALOR PEDÁGIO</label>
-              <input type="text" class="form-control" id="valorPedagio" name="valorPedagio" placeholder="Somente números">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-12">
-              <label for="valorMercadoria">VALOR DA MERCADORIA</label>
-              <input type="text" class="form-control" id="valorMercadoria" name="valorMercadoria"
+              <input type="text" class="form-control" id="valorPedagio" name="valorPedagio"
                 placeholder="Somente números">
+              <div>
+                <input type="checkbox" class="form-check-input" id="check-pedagio" checked>
+                <label class="form-check-label" for="check-pedagio">incluído no adiantamento?</label>
+              </div>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-12">
-              <label for="pesoChegada">PESO CHEGADA (KG)</label>
-              <input type="text" class="form-control" id="pesoChegada" name="pesoChegada" placeholder="Somente números">
+              <label for="valorEstadia">VALOR ESTADIA</label>
+              <input type="text" class="form-control" id="valorEstadia" name="valorEstadia"
+                placeholder="Somente números">
+              <div>
+                <input type="checkbox" class="form-check-input" id="check-estadia">
+                <label class="form-check-label" for="check-estadia">incluído no adiantamento?</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="valorSestSenat">SEST/SENAT</label>
+              <input type="text" class="form-control" id="valorSestSenat" name="valorSestSenat"
+                placeholder="Somente números">
             </div>
           </div>
         </div>
         <div class="item-innerform-flexbox">
           <div class="row mb-3">
             <div class="col-12">
-              <label for="pesoSaida">PESO SAÍDA (KG)</label>
-              <input type="text" class="form-control" id="pesoSaida" name="pesoSaida" placeholder="Somente números">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-12">
-              <label for="valorMercadoria">VALOR DA MERCADORIA</label>
-              <input type="text" class="form-control" id="valorMercadoria" name="valorMercadoria"
+              <label for="valorSeguroCarga">SEGURO CARGA</label>
+              <input type="text" class="form-control" id="valorSeguroCarga" name="valorSeguroCarga"
                 placeholder="Somente números">
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-12">
-              <label for="tipoQuebra">TIPO DE QUEBRA</label>
-              <select id="tipoQuebra" class="form-select" aria-label="Default select example" name="tipoQuebra">
-                <option value="">-- Escolha a sua opção --</option>
-                <option value="integral">INTEGRAL</option>
-                <option value="parcial">PARCIAL</option>
-              </select>
+              <label for="valorInss">INSS</label>
+              <input type="text" class="form-control" id="valorInss" name="valorInss" placeholder="Somente números">
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-12">
-              <label for="tolerancia">% TOLERANCIA</label>
-              <input type="text" class="form-control" id="tolerancia" name="tolerancia" placeholder="Somente números">
+              <label for="valorIcms">ICMS</label>
+              <input type="text" class="form-control" id="valorIcms" name="valorIcms" placeholder="Somente números">
             </div>
           </div>
-          <div class="row mb-4">
+          <div class="row mb-3">
             <div class="col-12">
-              <label for="pesoChegada">PESO CHEGADA (KG)</label>
-              <input type="text" class="form-control" id="pesoChegada" name="pesoChegada" placeholder="Somente números">
+              <label for="valorIrrf">IRRF</label>
+              <input type="text" class="form-control" id="valorIrrf" name="valorIrrf" placeholder="Somente números">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="valorTaxaAdm">TAXA ADM.</label>
+              <input type="text" class="form-control" id="valorTaxaAdm" name="valorTaxaAdm"
+                placeholder="Somente números">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="valorOutros">OUTROS</label>
+              <input type="text" class="form-control" id="valorOutros" name="valorOutros" placeholder="Somente números">
             </div>
           </div>
         </div>
@@ -155,19 +168,19 @@
       <div class="row mb-3 button-form-submit">
         <div class="col-12 mb-3">
           <button type="button" class="btn btn-lg btn-calcdesconto"
-            onclick="calculoQuebra('form#formCalculoDesconto')">Calcular</button>
+            onclick="calculoQuebra2('form#formCalculoDesconto')">Calcular</button>
         </div>
       </div>
       <hr>
       <div class="row w-100" style="margin: 0 auto;">
         <div class="innerform-flexbox">
           <div class="item-innerform-flexbox">
-            <label for="valorDesconto">VALOR DA QUEBRA (R$)</label>
-            <input type="text" class="form-control" id="valorDesconto" name="valorDesconto" disabled>
+            <label for="valorQuebra">VALOR DA QUEBRA (R$)</label>
+            <input type="text" class="form-control" id="valorQuebra" name="valorQuebra" disabled>
           </div>
           <div class="item-innerform-flexbox">
-            <label for="valorDesconto">VALOR A PAGAR (R$)</label>
-            <input type="text" class="form-control" id="valorDesconto" name="valorDesconto" disabled>
+            <label for="valorAPagar">VALOR A PAGAR (R$)</label>
+            <input type="text" class="form-control" id="valorAPagar" name="valorAPagar" disabled>
           </div>
           <div class="item-innerform-flexbox">
             <label for="valorDesconto">TOTAL DE DESCONTOS (R$)</label>

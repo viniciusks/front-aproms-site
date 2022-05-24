@@ -325,28 +325,30 @@ function calculoQuebra(selector) {
 function calculoQuebra2(selector) {
   // Coleta de variáveis
   let pesoSaida = parseInt($(selector)[0][0].value); // EM KG
+  let pesoChegada = parseInt($(selector)[0][1].value); // EM KG
   let valorMercadoria =
-    parseFloat($(selector)[0][1].value.replace(",", ".")) / pesoSaida; // VALOR POR KG
-  let tipoQuebra = $(selector)[0][2].value; // TOTAL OU PARCIAL
-  let tolerancia = parseFloat($(selector)[0][3].value.replace(",", ".")); // PERCENTUAL
-  let pesoChegada = parseInt($(selector)[0][4].value); // EM KG
-  let valorDesconto = parseFloat($(selector)[0][5].value.replace(",", ".")); // EM REAIS
-  let valorCFrete = parseFloat($(selector)[0][6].value.replace(",", "."));
-  let adicionais = parseFloat($(selector)[0][7].value.replace(",", "."));
-
+    parseFloat($(selector)[0][2].value.replace(",", ".")) / pesoSaida; // VALOR POR KG
+  let valorCFrete = parseFloat($(selector)[0][3].value.replace(",", "."));
+  let dAdiantamento = parseFloat($(selector)[0][4].value.replace(",", "."));
+  let tipoQuebra = $(selector)[0][5].value; // TOTAL OU PARCIAL
+  let tolerancia = parseFloat($(selector)[0][6].value.replace(",", ".")); // PERCENTUAL
+  let pedagio = parseFloat($(selector)[0][7].value.replace(",", "."));
   let bEstadia = $(selector)[0][8]; // boolean
-  let bPedagio = $(selector)[0][9]; // boolean
-  let dICMS = parseFloat($(selector)[0][10].value.replace(",", "."));
-  let dSegCarga = parseFloat($(selector)[0][11].value.replace(",", "."));
-  let dIRFonte = parseFloat($(selector)[0][12].value.replace(",", "."));
+  let estadia = parseFloat($(selector)[0][9].value.replace(",", "."));
+  let bPedagio = $(selector)[0][10]; // boolean
+  let dSESTSENAT = parseFloat($(selector)[0][11].value.replace(",", "."));
+  let dSegCarga = parseFloat($(selector)[0][12].value.replace(",", "."));
   let dINSS = parseFloat($(selector)[0][13].value.replace(",", "."));
-  let dSESTSENAT = parseFloat($(selector)[0][14].value.replace(",", "."));
-  let dAdiantamento = parseFloat($(selector)[0][15].value.replace(",", "."));
+  let dICMS = parseFloat($(selector)[0][14].value.replace(",", "."));
+  let dIRFonte = parseFloat($(selector)[0][15].value.replace(",", "."));
   let dTaxaAdm = parseFloat($(selector)[0][16].value.replace(",", "."));
   let dOutros = parseFloat($(selector)[0][17].value.replace(",", "."));
 
-  let pedagio = parseFloat($(selector)[0][18].value.replace(",", "."));
-  let estadia = parseFloat($(selector)[0][19].value.replace(",", "."));
+  let adicionais = 0;
+
+  let valorQuebra = $(selector)[0][19]; // EM REAIS
+  let valorAPagar = $(selector)[0][20]; // EM REAIS
+  let valorDesconto = $(selector)[0][21]; // EM REAIS
 
   /* let valorCFrete = 10050.43;  // PODE NÃO HAVER valor do frete
     let adicionais = 0; // sempre em zero*/
@@ -423,23 +425,24 @@ function calculoQuebra2(selector) {
     }
   }
 
-  console.log("Peso Saida: (Kg)", pesoSaida);
-  console.log("Peso Chegada: (Kg)", pesoChegada);
-  console.log("Diferença Peso: ", difPeso);
-  console.log("Tolerância: (Kg)", pesoLimQuebra);
-  console.log("Valor Mercadoria Por Kg: ", valorMercadoria.toFixed(2));
-  console.log("Valor do Documento de Frete: (R$)", valorCFrete.toFixed(2));
-  console.log("Valor de adiantamento: (R$)", dAdiantamento.toFixed(2));
-  console.log("Valor Descontos", totalDescontos.toFixed(2));
+  // console.log("Peso Saida: (Kg)", pesoSaida);
+  // console.log("Peso Chegada: (Kg)", pesoChegada);
+  // console.log("Diferença Peso: ", difPeso);
+  // console.log("Tolerância: (Kg)", pesoLimQuebra);
+  // console.log("Valor Mercadoria Por Kg: ", valorMercadoria.toFixed(2));
+  // console.log("Valor do Documento de Frete: (R$)", valorCFrete.toFixed(2));
+  // console.log("Valor de adiantamento: (R$)", dAdiantamento.toFixed(2));
+  // console.log("Valor Descontos", totalDescontos.toFixed(2));
 
-  console.log("Perda Excedente: ", perdaExcedente);
-  console.log("Valor da quebra: (R$)", ret_descQuebra.toFixed(2));
+  // console.log("Perda Excedente: ", perdaExcedente);
+  // console.log("Valor da quebra: (R$)", ret_descQuebra.toFixed(2));
 
-  if (valorCFrete > 0)
-    console.log(
-      "Valor à pagar: (R$)",
-      (valorCFrete - ret_descQuebra - totalDescontos + adicionais).toFixed(2)
-    );
+  if (valorCFrete > 0) {
+    valorDesconto.value = totalDescontos;
+    valorQuebra.value = ret_descQuebra;
+    valorAPagar.value = (valorCFrete - ret_descQuebra - totalDescontos) + adicionais;
+
+  }
   else console.log("Sem valor da carta frete.");
   // valorDesconto.value = parseFloat(ret_descQuebra.toFixed(2));
 }
