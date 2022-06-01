@@ -290,15 +290,19 @@ function importComponents(path) {
     });
 }
 
-function calculoQuebra(selector) {
+function calculoQuebra(
+  _pesoSaida,
+  _valorMercadoria,
+  _tipoQuebra,
+  _tolerancia,
+  _pesoChegada
+) {
   // Coleta de variáveis
-  let pesoSaida = parseInt($(selector)[0][0].value);
-  let valorMercadoria =
-    parseFloat($(selector)[0][1].value.replace(",", ".")) / pesoSaida;
-  let tipoQuebra = $(selector)[0][2].value;
-  let tolerancia = parseFloat($(selector)[0][3].value.replace(",", "."));
-  let pesoChegada = parseInt($(selector)[0][4].value);
-  let valorDesconto = $(selector)[0][6];
+  let pesoSaida = _pesoChegada;
+  let valorMercadoria = _valorMercadoria;
+  let tipoQuebra = _tipoQuebra;
+  let tolerancia = _tolerancia;
+  let pesoChegada = _pesoChegada;
 
   // Primeiro passo
   // Cálculo do valor da tolerância da quebra
@@ -319,7 +323,71 @@ function calculoQuebra(selector) {
     }
   }
 
-  valorDesconto.value = parseFloat(desconto.toFixed(2));
+  return desconto.toFixed(2) * -1;
+}
+
+function calculoDesconto(selector) {
+  // Coleta de variáveis
+  let pesoSaida = parseInt($(selector)[0][0].value); // EM KG
+  let pesoChegada = parseInt($(selector)[0][1].value); // EM KG
+  let valorMercadoria =
+    parseFloat($(selector)[0][2].value.replace(",", ".")) / pesoSaida; // VALOR POR KG
+  let valorCFrete = parseFloat($(selector)[0][3].value.replace(",", "."));
+  let dAdiantamento = parseFloat($(selector)[0][4].value.replace(",", "."));
+  let tipoQuebra = $(selector)[0][5].value; // TOTAL OU PARCIAL
+  let tolerancia = parseFloat($(selector)[0][6].value.replace(",", ".")); // PERCENTUAL
+  let pedagio = parseFloat($(selector)[0][7].value.replace(",", "."));
+  let bEstadia = $("#check-estadia").is(":checked"); // boolean
+  let estadia = parseFloat($(selector)[0][9].value.replace(",", "."));
+  let bPedagio = $("#check-pedagio").is(":checked"); // boolean
+  let dSESTSENAT = parseFloat($(selector)[0][11].value.replace(",", "."));
+  let dSegCarga = parseFloat($(selector)[0][12].value.replace(",", "."));
+  let dINSS = parseFloat($(selector)[0][13].value.replace(",", "."));
+  let dICMS = parseFloat($(selector)[0][14].value.replace(",", "."));
+  let dIRFonte = parseFloat($(selector)[0][15].value.replace(",", "."));
+  let dTaxaAdm = parseFloat($(selector)[0][16].value.replace(",", "."));
+  let dOutros = parseFloat($(selector)[0][17].value.replace(",", "."));
+
+  let valorQuebra = $(selector)[0][19]; // EM REAIS
+  let valorAPagar = $(selector)[0][20]; // EM REAIS
+  let valorDesconto = $(selector)[0][21]; // EM REAIS
+
+  // Primeiro passo: Calculo da quebra
+  let quebra = calculoQuebra(
+    pesoSaida,
+    valorMercadoria,
+    tipoQuebra,
+    tolerancia,
+    pesoChegada
+  );
+
+  // Segundo passo: Calcular todos os descontos
+  let totalDescontos =
+    dAdiantamento +
+    dICMS +
+    dINSS +
+    dIRFonte +
+    dOutros +
+    dSESTSENAT +
+    dSegCarga +
+    dTaxaAdm;
+
+  // Terceiro passo: Calcular os adicionais
+  let adicionais = (bEstadia ? estadia : 0) + (bPedagio ? pedagio : 0);
+
+  console.log(quebra);
+  console.log(totalDescontos);
+  console.log(adicionais);
+
+  let descontos = totalDescontos - quebra;
+
+  if (valorCFrete > 0) {
+    valorDesconto.value = totalDescontos;
+    valorQuebra.value = quebra;
+    valorAPagar.value = valorCFrete - descontos + adicionais;
+  } else {
+    console.log("Sem valor da carta frete.");
+  }
 }
 
 function calculoQuebra2(selector) {
@@ -349,24 +417,6 @@ function calculoQuebra2(selector) {
   let valorQuebra = $(selector)[0][19]; // EM REAIS
   let valorAPagar = $(selector)[0][20]; // EM REAIS
   let valorDesconto = $(selector)[0][21]; // EM REAIS
-
-  /* let valorCFrete = 10050.43;  // PODE NÃO HAVER valor do frete
-    let adicionais = 0; // sempre em zero*/
-
-  /* let bEstadia = false; // inserido do adiantamento
-    let bPedagio = false; // inserido do adiantamento
-    let dICMS = 0;
-    let dSegCarga = 89.67;
-    let dIRFonte = 0;
-    let dINSS = 0;
-    let dSESTSENAT = 0;
-    let dAdiantamento = 8605.00;
-    let dTaxaAdm = 0;
-    let dOutros = 8.90;
-
-    let pedagio = 706.80;
-    let estadia  = 0;
-    */
 
   // Somar Descontos independentes
   let totalDescontos =
@@ -440,10 +490,9 @@ function calculoQuebra2(selector) {
   if (valorCFrete > 0) {
     valorDesconto.value = totalDescontos;
     valorQuebra.value = ret_descQuebra;
-    valorAPagar.value = (valorCFrete - ret_descQuebra - totalDescontos) + adicionais;
-
-  }
-  else console.log("Sem valor da carta frete.");
+    valorAPagar.value =
+      valorCFrete - ret_descQuebra - totalDescontos + adicionais;
+  } else console.log("Sem valor da carta frete.");
   // valorDesconto.value = parseFloat(ret_descQuebra.toFixed(2));
 }
 
