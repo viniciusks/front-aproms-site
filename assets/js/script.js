@@ -352,6 +352,8 @@ function calculoDesconto(selector) {
   let valorAPagar = $(selector)[0][20]; // EM REAIS
   let valorDesconto = $(selector)[0][21]; // EM REAIS
 
+  let adicionais = 0;
+
   // Primeiro passo: Calculo da quebra
   let quebra = calculoQuebra(
     pesoSaida,
@@ -360,6 +362,9 @@ function calculoDesconto(selector) {
     tolerancia,
     pesoChegada
   );
+
+  // Calcular o adiantamento de Estadia e Pedagio
+  dAdiantamento = (bEstadia ? estadia : 0) + (bPedagio ? pedagio : 0);
 
   // Segundo passo: Calcular todos os descontos
   let totalDescontos =
@@ -371,9 +376,6 @@ function calculoDesconto(selector) {
     dSESTSENAT +
     dSegCarga +
     dTaxaAdm;
-
-  // Terceiro passo: Calcular os adicionais
-  let adicionais = (bEstadia ? estadia : 0) + (bPedagio ? pedagio : 0);
 
   console.log(quebra);
   console.log(totalDescontos);
@@ -437,12 +439,6 @@ function calculoQuebra2(selector) {
     adicionais += estadia;
   }
 
-  /* let pesoSaida = 39840;   // EM KG
-    let valorMercadoria = 110224 / pesoSaida; // VALOR POR KG
-    let tipoQuebra = "parcial";            // TOTAL OU PARCIAL
-    let tolerancia = 0.25; // PERCENTUAL
-    let pesoChegada = 39900; // EM KG  */
-
   let difPeso = pesoSaida - pesoChegada; // KG
 
   let ret_pesoCalculo;
@@ -475,25 +471,15 @@ function calculoQuebra2(selector) {
     }
   }
 
-  // console.log("Peso Saida: (Kg)", pesoSaida);
-  // console.log("Peso Chegada: (Kg)", pesoChegada);
-  // console.log("Diferença Peso: ", difPeso);
-  // console.log("Tolerância: (Kg)", pesoLimQuebra);
-  // console.log("Valor Mercadoria Por Kg: ", valorMercadoria.toFixed(2));
-  // console.log("Valor do Documento de Frete: (R$)", valorCFrete.toFixed(2));
-  // console.log("Valor de adiantamento: (R$)", dAdiantamento.toFixed(2));
-  // console.log("Valor Descontos", totalDescontos.toFixed(2));
-
-  // console.log("Perda Excedente: ", perdaExcedente);
-  // console.log("Valor da quebra: (R$)", ret_descQuebra.toFixed(2));
-
   if (valorCFrete > 0) {
     valorDesconto.value = totalDescontos;
     valorQuebra.value = ret_descQuebra;
     valorAPagar.value =
       valorCFrete - ret_descQuebra - totalDescontos + adicionais;
-  } else console.log("Sem valor da carta frete.");
-  // valorDesconto.value = parseFloat(ret_descQuebra.toFixed(2));
+  } else {
+    console.log("Sem valor da carta frete.");
+  }
+
 }
 
 function loginSystem() {
