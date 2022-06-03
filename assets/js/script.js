@@ -431,11 +431,11 @@ function calculoQuebra2(selector) {
     dTaxaAdm +
     dOutros;
 
-  if (!bPedagio) {
+  if (!bPedagio.checked) {
     adicionais += pedagio;
   }
 
-  if (!bEstadia) {
+  if (!bEstadia.checked) {
     adicionais += estadia;
   }
 
