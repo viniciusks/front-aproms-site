@@ -365,8 +365,6 @@ function calculoQuebra2(selector) {
     dTaxaAdm +
     dOutros;
 
-  console.log(bPedagio);
-
   if (!bPedagio.checked) {
     adicionais += pedagio;
   }
