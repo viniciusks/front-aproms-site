@@ -337,9 +337,9 @@ function calculoQuebra2(selector) {
   let tipoQuebra = $(selector)[0][5].value; // TOTAL OU PARCIAL
   let tolerancia = parseFloat($(selector)[0][6].value.replace(",", ".")); // PERCENTUAL
   let pedagio = parseFloat($(selector)[0][7].value.replace(",", "."));
-  let bEstadia = $(selector)[0][8]; // boolean
+  let bPedagio = $(selector)[0][8]; // boolean
   let estadia = parseFloat($(selector)[0][9].value.replace(",", "."));
-  let bPedagio = $(selector)[0][10]; // boolean
+  let bEstadia = $(selector)[0][10]; // boolean
   let dSESTSENAT = parseFloat($(selector)[0][11].value.replace(",", "."));
   let dSegCarga = parseFloat($(selector)[0][12].value.replace(",", "."));
   let dINSS = parseFloat($(selector)[0][13].value.replace(",", "."));
@@ -364,6 +364,8 @@ function calculoQuebra2(selector) {
     dAdiantamento +
     dTaxaAdm +
     dOutros;
+
+  console.log(bPedagio);
 
   if (!bPedagio.checked) {
     adicionais += pedagio;
