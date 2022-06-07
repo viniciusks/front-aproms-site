@@ -278,6 +278,10 @@ function importComponents(path) {
     })
     .then((data) => {
       document.querySelector("footer").innerHTML = data;
+
+      if (localStorage.getItem("cookies") == null) {
+        $("#cookies").hide().fadeIn();
+      }
     });
 
   // Import modals
@@ -290,43 +294,7 @@ function importComponents(path) {
     });
 }
 
-function calculoQuebra(
-  _pesoSaida,
-  _valorMercadoria,
-  _tipoQuebra,
-  _tolerancia,
-  _pesoChegada
-) {
-  // Coleta de variáveis
-  let pesoSaida = _pesoChegada;
-  let valorMercadoria = _valorMercadoria;
-  let tipoQuebra = _tipoQuebra;
-  let tolerancia = _tolerancia;
-  let pesoChegada = _pesoChegada;
-
-  // Primeiro passo
-  // Cálculo do valor da tolerância da quebra
-  valorQuebra = pesoSaida * (tolerancia / 100);
-
-  // Segundo passo
-  // Cálculo da perda real da mercadoria
-  perdaReal = pesoSaida - pesoChegada;
-
-  if (tipoQuebra == "parcial") {
-    perdaExcedente = perdaReal - valorQuebra;
-    desconto = valorMercadoria * perdaExcedente;
-  } else {
-    if (perdaReal > valorQuebra) {
-      desconto = valorMercadoria * perdaReal;
-    } else {
-      desconto = 0;
-    }
-  }
-
-  return desconto.toFixed(2) * -1;
-}
-
-function calculoQuebra2(selector) {
+function calculoQuebra(selector) {
   // Coleta de variáveis
   let pesoSaida = parseInt($(selector)[0][0].value); // EM KG
   let pesoChegada = parseInt($(selector)[0][1].value); // EM KG
@@ -413,7 +381,6 @@ function calculoQuebra2(selector) {
   } else {
     console.log("Sem valor da carta frete.");
   }
-
 }
 
 function loginSystem() {
@@ -537,4 +504,10 @@ function configInputDoubt() {
       }
     });
   }
+}
+
+function cookies() {
+  // TODO: Implementar função de cookies
+  localStorage.setItem("cookies", "teste");
+  $("#cookies").show().fadeOut();
 }

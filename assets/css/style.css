@@ -370,10 +370,6 @@ footer .container ul li a.social-network:hover {
   z-index: 99999;
 }
 
-/* #modalCalcDesconto.modal {
-  overflow-y: hidden;
-} */
-
 .modal > div {
   width: 400px;
   position: relative;
@@ -563,6 +559,40 @@ div#modalForgotPassword form .button-form-submit .btn-forgot:hover {
   order: 3;
   flex-grow: 1;
   align-self: center;
+}
+
+/* COOKIES */
+#cookies {
+  display: none;
+}
+
+.cookies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  z-index: 999;
+}
+
+.cookies .inner-cookies {
+  order: 2;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.cookies .inner-cookies a {
+  color: var(--primary-color);
+}
+
+.cookies .inner-cookies a:hover {
+  color: var(--orange);
 }
 
 /* Responsive */
