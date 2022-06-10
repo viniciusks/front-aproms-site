@@ -562,10 +562,6 @@ div#modalForgotPassword form .button-form-submit .btn-forgot:hover {
 }
 
 /* COOKIES */
-#cookies {
-  display: none;
-}
-
 .cookies {
   display: flex;
   flex-direction: row;

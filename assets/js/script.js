@@ -278,10 +278,7 @@ function importComponents(path) {
     })
     .then((data) => {
       document.querySelector("footer").innerHTML = data;
-
-      if (localStorage.getItem("cookies") == null) {
-        $("#cookies").hide().fadeIn();
-      }
+      verifyCookies();
     });
 
   // Import modals
@@ -379,7 +376,7 @@ function calculoQuebra(selector) {
     valorAPagar.value =
       valorCFrete - ret_descQuebra - totalDescontos + adicionais;
   } else {
-    console.log("Sem valor da carta frete.");
+    alert("Sem valor da carta frete.");
   }
 }
 
@@ -462,7 +459,7 @@ function loadStates() {
       endState.html(contentState);
     },
     error: function (response) {
-      console.log(response);
+      alert(response);
     },
   });
 }
@@ -489,7 +486,7 @@ function chooseCity(idState, idCity) {
       selectCities.html(contentCities);
     },
     error: function (response) {
-      console.log(response);
+      alert(response);
     },
   });
 }
@@ -506,8 +503,49 @@ function configInputDoubt() {
   }
 }
 
-function cookies() {
-  // TODO: Implementar função de cookies
-  localStorage.setItem("cookies", "teste");
+function verifyCookies() {
+  const container = $("#cookies");
+  //var UIDP = window.location.href.toString();
+
+  if (!container) {
+    return null;
+  } else {
+    if (getCookie('UID')) { // SE OS COOKIES JÁ TIVEREM SIDO ACEITOS
+      container.show().fadeOut(); // ESCONDE A NOTIFICAÇÃO
+    }
+  }
+}
+
+function armazenarCookies() {      // ARMAZENAR COOKIES
   $("#cookies").show().fadeOut();
+  let c_exists = getCookie('UID');
+  if (c_exists === "") {
+    setCookie('UID', 'Conexão realizada!');
+    setCookie('NAV', 'navegador');
+  }
+}
+
+function setCookie(c_name, c_value) {
+  document.cookie = `${c_name}=${c_value}`;
+}
+
+function getCookie(c_name) {
+  var name = c_name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1);
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function upCookie(c_name, c_value) {
+  document.cookie = `${c_name}=${c_value}`;
+}
+
+function delCookie(c_name) {
+  document.cookie = `${c_name}=;` + `expires= Thu, 021 Jan 1970 00:00:00 UTC;`;
 }
