@@ -1,25 +1,19 @@
 // TODO: Terminar mapa
 let Windows = [];
-let map;
 
 function initMap() {
   const dourados = { lat: -22.2218, lng: -54.8064 };
+  const directionsService = new google.maps.DirectionsService();
+  const directionsRenderer = new google.maps.DirectionsRenderer();
 
-  map = new google.maps.Map(document.getElementById("map"), {
+  var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 6,
     mapTypeControl: false,
     center: dourados,
     mapTypeId: "roadmap",
   });
 
-  const marker = new google.maps.Marker({
-    position: dourados,
-    map: map,
-  });
-
-  const directionsService = new google.maps.DirectionsService();
-  const directionsRenderer = new google.maps.DirectionsRenderer();
-
+  // CRIA AS MARCAÇÕES
   // TODO: Alterar para atualização dinâmica
   var script = document.createElement("script");
   script.src = "./assets/js/geo-json.js";
@@ -45,7 +39,36 @@ function initMap() {
       bindInfoWindow(marker, map, infowindow);
     }
   };
+
+  directionsRenderer.setMap(map);
+
+  const onClickHandler = function () {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+  };
+
+  document.getElementById("search-posto").addEventListener("click", onClickHandler);
 }
+
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  let start = $("#startCity").val();
+  let end = $("#endCity").val();
+
+  console.log(directionsService);
+  console.log(directionsRenderer);
+
+  directionsService
+    .route({
+      origin: start,
+      destination: end,
+      travelMode: google.maps.TravelMode.DRIVING,
+    })
+    .then((response) => {
+      directionsRenderer.setDirections(response);
+    })
+    .catch((e) => window.alert("Directions request failed due to " + status));
+}
+
+// LEGADO -------
 
 function bindInfoWindow(marker, map, infowindow) {
   closeOtherWindows();

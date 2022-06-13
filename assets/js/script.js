@@ -1,3 +1,4 @@
+// IMPORTA OS COMPONENTES PADRÕES DE UMA TELA
 importComponents(window.location.pathname);
 
 $(document).ready(function () {
@@ -216,6 +217,9 @@ $(document).ready(function () {
 
     showObject(div);
   });
+
+  // CARREGA OS ESTADOS BASEADO NA API IBGE
+  loadStates();
 });
 
 function searchAnwser() {
@@ -510,18 +514,20 @@ function verifyCookies() {
   if (!container) {
     return null;
   } else {
-    if (getCookie('UID')) { // SE OS COOKIES JÁ TIVEREM SIDO ACEITOS
+    if (getCookie("UID")) {
+      // SE OS COOKIES JÁ TIVEREM SIDO ACEITOS
       container.show().fadeOut(); // ESCONDE A NOTIFICAÇÃO
     }
   }
 }
 
-function armazenarCookies() {      // ARMAZENAR COOKIES
+function armazenarCookies() {
+  // ARMAZENAR COOKIES
   $("#cookies").show().fadeOut();
-  let c_exists = getCookie('UID');
+  let c_exists = getCookie("UID");
   if (c_exists === "") {
-    setCookie('UID', 'Conexão realizada!');
-    setCookie('NAV', 'navegador');
+    setCookie("UID", "Conexão realizada!");
+    setCookie("NAV", "navegador");
   }
 }
 
@@ -531,10 +537,10 @@ function setCookie(c_name, c_value) {
 
 function getCookie(c_name) {
   var name = c_name + "=";
-  var ca = document.cookie.split(';');
+  var ca = document.cookie.split(";");
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
-    while (c.charAt(0) == ' ') c = c.substring(1);
+    while (c.charAt(0) == " ") c = c.substring(1);
     if (c.indexOf(name) == 0) {
       return c.substring(name.length, c.length);
     }
