@@ -383,6 +383,11 @@ footer .container ul li a.social-network:hover {
   margin: 8rem auto;
 }
 
+#modalConsultaCIOT.modal > div {
+  padding: 20px 2px 15px 2px;
+  margin: 8rem auto;
+}
+
 #modalForgotPassword.modal > div {
   padding: 20px;
   margin: 8rem auto;
@@ -589,6 +594,21 @@ div#modalForgotPassword form .button-form-submit .btn-forgot:hover {
 
 .cookies .inner-cookies a:hover {
   color: var(--orange);
+}
+
+#showContentPin {
+  margin: 1rem 0 0 0;
+}
+
+.btn-cad-grat {
+  padding: 10px;
+  background: #006adb;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.float-right {
+  float: right !important;
 }
 
 /* Responsive */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/utils.css">
+  <link rel="stylesheet" href="../assets/css/about-us/style.css">
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.svg">
+  <title>APROMS | Associação dos Postos de MS</title>
+</head>
+
+<body>
+  <header></header>
+
+  <main>
+    <section id="banners">
+      <form method="POST" action="/aproms/aproms.dll/cadastro-transportadora-gratuita?op=1" id="idFormCadTranspGrat">
+        <div class="container mt-5 mb-5" style="min-height: 450px;">
+          <div class="row m-0 p-0">
+            <p class="col-12 title-cad-grat text-center mb-3">Cadastro para emissão gratuita de CIOT</p>
+            <p class="col-12 title-cad-grat text-left" style="font-size:19px">Dados do Contratante</p>
+            <div class="col-12 col-md-4">
+              <span>CPF/CNPJ <span style="color: red;">*</span></span>
+              <input type="text" id="idCnpj" onblur="MascaraCPFCNPJ(this);" onkeypress="MascaraCPFCNPJ(this);"
+                maxlength="18" class="form-control mb-2" name="edCnpj" required="" autofocus="">
+            </div>
+            <div class="col-12 col-md-8">
+              <span>Nome/Razão social <span style="color: red;">*</span></span>
+              <input type="text" id="idNomeRazao" class="form-control mb-2" name="edNome" required="">
+            </div>
+            <div class="col-12 col-md-4">
+              <span>Celular <span style="color: red;">*</span></span>
+              <input type="text" id="idCelular" class="form-control mb-2" name="edCel" required="" maxlength="15">
+            </div>
+            <div class="col-12 col-md-4">
+              <span>Contato <span style="color: red;">*</span></span>
+              <input type="text" id="idContato" class="form-control mb-2" name="edContato" required="">
+            </div>
+            <div class="col-12 col-md-4">
+              <span>RNTRC <span style="color: red;">*</span></span>
+              <input type="text" id="idRntrc" class="form-control mb-2" maxlength="9" name="edRntrc"
+                onkeypress="return somenteNumeros(event)" required="">
+            </div>
+            <div class="col-12 col-md-12">
+              <span>Email <span style="color: red;">*</span></span>
+              <input type="text" id="idEmail" class="form-control mb-2" name="edEmail" required="">
+            </div>
+            <!-- <div class="col-12 col-md-4">
+                    <span>Informe o PIN enviado no seu celular <font color="red">*</font></span>
+                    <input type="text" id="idPin" class="form-control mb-2" disabled  name="edPin" required >
+              </div> -->
+            <div class="col-12 float-right">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="S" id="idAcceptTerms" name="edAceitaTermos">
+                <label class="form-check-label" for="idAcceptTerms">
+                  Eu concordo com os <a href="/termos-de-uso/"
+                    style="color: rgb(55, 55, 206);text-decoration: underline;">Termos de Serviço</a> e
+                  <a href="/politicas-privacidade/" style="color: rgb(55, 55, 206);text-decoration: underline;">Política
+                    de Privacidade</a>
+                </label>
+              </div>
+            </div>
+            <span class="col-12 text-erro text-danger"></span>
+            <div class="col-12 float-right">
+              <button class="btn btn-cad-grat float-right">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <!-- Modal -->
+  <div id="modalContents"></div>
+
+  <script src="https://kit.fontawesome.com/7d0c01764d.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/ciot.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

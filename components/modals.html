@@ -235,3 +235,29 @@
     </div>
   </div>
 </div>
+<div id="modalConsultaCIOT" class="modal">
+  <div>
+    <a title="Fechar" class="close btn-access-system" onclick="showObject('div#modalConsultaCIOT', 1)"><i
+        class="fas fa-times"></i></a>
+    <div class="row mb-3">
+      <form id="idConsultaCIOT" method="POST">
+        <div class="modal-header">
+          <h5 class="modal-title">Consultar Operação de Transporte</h5>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0 pb-0 ">CNPJ Contratante</p>
+          <input class="col-12 form-control mt-0" type="text" id="idCnpjContratante" name="contratante" maxlength="18">
+          <p class="mb-0 pb-0 mt-2">Informe o código para consultar o CIOT</p>
+          <input class="col-12 form-control" type="text" id="idCiotConsulta" name="CIOT">
+          <span class="span-ciot-erro"></span>
+          <div class="alert alert-danger ciot-error mt-2 d-none" role="alert"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"
+            onclick="showObject('div#modalConsultaCIOT', 1)">Fechar</button>
+          <button type="submit" class="btn btn-success text-white">Consultar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
