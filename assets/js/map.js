@@ -671,8 +671,8 @@ function getCordinates() {
     },
     {
       nome: "COMERCIO DE COMBUSTIVEIS PASTORELLO GUAIRACA II",
-      longitude: "-25.361113637896178",
-      latitude: "-51.46892579692999",
+      longitude: "-51.46892579692999",
+      latitude: "-25.361113637896178",
       altitude: 0,
       altitudeReference: -1,
     },
